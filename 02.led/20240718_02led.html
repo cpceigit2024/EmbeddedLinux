@@ -1,0 +1,767 @@
+<!DOCTYPE html><html><head>
+      <title>20240718_02led</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\sfujimoto\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+body {
+  counter-reset: chapter;
+}
+h1 {
+  counter-reset: sub-chapter;
+}
+h2 {
+  counter-reset: section;
+}
+h3 {
+  counter-reset: sub-section;
+}
+h4 {
+  counter-reset: sub-sub-section;
+}
+div.TOC ul {
+  counter-reset: section;
+}
+.markdown-preview.markdown-preview h1 {
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+}
+.markdown-preview.markdown-preview h2 {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+.markdown-preview.markdown-preview h3 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+.markdown-preview.markdown-preview h4 {
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+}
+.markdown-preview.markdown-preview h4:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #5472cd;
+  bottom: -3px;
+  width: 20%;
+}
+.markdown-preview.markdown-preview h5 {
+  border-bottom: solid 3px black;
+}
+.markdown-preview.markdown-preview h1::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+.markdown-preview.markdown-preview h2::before {
+  counter-increment: sub-chapter;
+  content: counter(chapter) "." counter(sub-chapter) ". ";
+}
+.markdown-preview.markdown-preview h3::before {
+  counter-increment: section;
+  content: counter(chapter) "." counter(sub-chapter) "." counter(section) ". ";
+}
+.markdown-preview.markdown-preview h4::before {
+  counter-increment: sub-section;
+}
+.markdown-preview.markdown-preview h5::before {
+  counter-increment: sub-sub-section;
+}
+.markdown-preview.markdown-preview div.TOC li {
+  list-style: none;
+}
+.markdown-preview.markdown-preview div.TOC ul > li:before {
+  counter-increment: section;
+  content: counters(section, '.') '. ';
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="02led">02.led </h1>
+<p><a href="">2024/7/18 Table of Contents</a></p>
+<div class="TOC">
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ol>
+<li><a href="#02led">02.led</a>
+<ol>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+<li><a href="#%E6%A7%8B%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF">構成データ</a></li>
+<li><a href="#led%E5%88%B6%E5%BE%A1">LED制御</a></li>
+<li><a href="#%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90">デバイスドライバ</a></li>
+<li><a href="#%E4%BE%8B%E9%A1%8C-ledctl">例題 ledctl</a></li>
+<li><a href="#%E8%AA%B2%E9%A1%8C-%E8%B2%A0%E8%8D%B7%E8%A1%A8%E7%A4%BA%E5%99%A8-ldmeter">課題 負荷表示器 ldmeter</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<div style="page-break-before:always"></div>  <!-- PDFで改ページ-->
+<h2 id="目的">目的 </h2>
+<p>組込みアプリケーション開発 02.led</p>
+<h2 id="構成データ">構成データ </h2>
+<h3 id="mediasf_armadillox1hwpwmworkr06_2024apllication_debugtextpractice-ディレクトリ">/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Apllication_debug/text/practice ディレクトリ </h3>
+<details open=""><summary> ･･･/share/ArmadilloX1/hwpwm/<span style="color: red">work</span>/R06_2024/Application<span style="color: red">_debug</span>/<span style="color: red">text</span>/practice/ の構成</summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>user@1204PC-Z490M:/mnt/v/VirtualBoxWork/share/ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice$ tree <span class="token parameter variable">-aF</span> <span class="token parameter variable">-L</span> <span class="token number">3</span>
+./
+├── 02.led/
+│   ├── drivers/
+│   │   └── leds/
+│   │       ├── leds.c*         <span class="token operator">&lt;</span>───── ドライバソース
+│   │       └── Makefile*       <span class="token operator">&lt;</span>───── ドライバ用Makefile
+│   ├── ldmeter.c*              <span class="token operator">&lt;</span>───── 例題 デバイス制御用ソース
+│   ├── ledctl.c*               <span class="token operator">&lt;</span>───── 課題 デバイス制御用ソース
+│   └── Makefile*               <span class="token operator">&lt;</span>───── デバイス制御用Makefile
+│
+
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h2 id="led制御">LED制御 </h2>
+<h3 id="デバイス仕様">デバイス仕様 </h3>
+<p><img src="assets/2023-09-08_09-28-18.png" alt="alt text"></p>
+<p>デバイスファイル: "/sys/class/leds/led_ext/brightness"</p>
+<table>
+<thead>
+<tr>
+<th>b7</th>
+<th>b6</th>
+<th>b5</th>
+<th>b4</th>
+<th>b3</th>
+<th>b2</th>
+<th>b1</th>
+<th>b0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>led8</td>
+<td>led7</td>
+<td>led6</td>
+<td>led5</td>
+<td>led4</td>
+<td>led3</td>
+<td>led2</td>
+<td>led1</td>
+</tr>
+</tbody>
+</table>
+<p>デバイスファイルに 1～255 の値を書き込むことで点灯、0は消灯</p>
+<h2 id="デバイスドライバ">デバイスドライバ </h2>
+<h3 id="ソース">ソース </h3>
+<h4 id="ledsc">leds.c </h4>
+<details open=""><summary> 02.led/drivers/leds.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/module.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/kernel.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/init.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/platform_device.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/io.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/leds.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/err.h&gt;</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;asm/armadilloX1-ext-cpld.h&gt;</span></span>
+
+<span class="token comment">// デバイス書き込み関数(leds_set)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">leds_set</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">led_classdev</span> <span class="token operator">*</span>led_cdev<span class="token punctuation">,</span>
+				 <span class="token keyword keyword-enum">enum</span> <span class="token class-name">led_brightness</span> brightness<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// LEDを光らせます。(cpld_write)</span>
+	<span class="token function">cpld_write</span><span class="token punctuation">(</span>CPLD_WRITE_LED<span class="token punctuation">,</span> brightness<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// LEDクラスデバイス構造体</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">led_classdev</span> leds <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span>name			<span class="token operator">=</span> <span class="token string">"led_ext"</span><span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>brightness_set	<span class="token operator">=</span> leds_set<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>max_brightness	<span class="token operator">=</span> <span class="token number">255</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// probe関数(leds_probe)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">leds_probe</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>pdev<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// LED点灯状態レジスタを初期化します。(cpld_write)</span>
+	<span class="token function">cpld_write</span><span class="token punctuation">(</span>CPLD_WRITE_LED<span class="token punctuation">,</span> <span class="token number">0x00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// LEDクラスデバイスを登録します。(led_classdev_register)</span>
+	<span class="token comment">// -&gt;/sys/class/leds/配下にファイルを作成し、/sys/class/leds/led_ext/brightnessに</span>
+	<span class="token comment">//   値を書き込むとデバイス書き込み関数(leds_set)が呼び出されるように</span>
+	<span class="token comment">//   登録します。</span>
+	<span class="token keyword keyword-return">return</span> <span class="token function">led_classdev_register</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>leds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// remove関数(leds_remove)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">leds_remove</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>pdev<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// LEDクラスデバイスを解除します。(led_classdev_unregister)</span>
+	<span class="token function">led_classdev_unregister</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>leds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// プラットフォームドライバ</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_driver</span> leds_driver <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span>probe	<span class="token operator">=</span> leds_probe<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>remove	<span class="token operator">=</span> leds_remove<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>driver	<span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span>name	<span class="token operator">=</span> <span class="token string">"armadillo-x1-extension-leds"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">.</span>owner	<span class="token operator">=</span> THIS_MODULE<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>pdev<span class="token punctuation">;</span>
+
+<span class="token comment">// 初期化関数(leds_init)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> __init <span class="token function">leds_init</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// プラットフォームデバイスを登録します。(platform_device_register_simple)</span>
+	<span class="token comment">// -&gt;プラットフォーム依存のデバイス情報を登録します。</span>
+	pdev <span class="token operator">=</span> <span class="token function">platform_device_register_simple</span><span class="token punctuation">(</span><span class="token string">"armadillo-x1-extension-leds"</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">IS_ERR</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		ret <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>pdev<span class="token punctuation">;</span>
+		<span class="token keyword keyword-goto">goto</span> err_ret<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// プラットフォームドライバを登録します。(platform_driver_register)</span>
+	<span class="token comment">// -&gt;登録したプラットフォームデバイスのリソース情報を取得し、</span>
+	<span class="token comment">//   プラットフォームドライバとして、probe関数とremove関数を登録します。</span>
+	ret <span class="token operator">=</span> <span class="token function">platform_driver_register</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>leds_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-goto">goto</span> err_platform_device_unregister<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+ err_platform_device_unregister<span class="token operator">:</span>
+	<span class="token function">platform_device_unregister</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ err_ret<span class="token operator">:</span>
+	<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 終了関数(leds_exit)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> __exit <span class="token function">leds_exit</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// プラットフォームドライバを解除します。(platform_driver_unregister)</span>
+	<span class="token function">platform_driver_unregister</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>leds_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// プラットフォームデバイスを解除します。(platform_device_unregister)</span>
+	<span class="token function">platform_device_unregister</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 初期化の際に、初期化関数が呼ばれるように登録します。</span>
+<span class="token function">module_init</span><span class="token punctuation">(</span>leds_init<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 終了する際に、終了関数が呼ばれるように登録します。</span>
+<span class="token function">module_exit</span><span class="token punctuation">(</span>leds_exit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// MODULE_LICENSEは"GPL"とします。</span>
+<span class="token function">MODULE_LICENSE</span><span class="token punctuation">(</span><span class="token string">"GPL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile">Makefile </h4>
+<details open=""><summary> /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>KERNELDIR <span class="token operator">=</span> /home/atmark/linux-4.9-x1-at27_dbg
+ARCH <span class="token operator">=</span> arm
+PREFIX <span class="token operator">=</span> arm-linux-gnueabihf-
+MOD_PATH <span class="token operator">=</span> /work/linux/nfsroot
+
+EXTRA_CFLAGS <span class="token operator">+=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+obj-m :<span class="token operator">=</span> leds.o
+
+modules:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>ARCH<span class="token variable">)</span></span> <span class="token assign-left variable">CROSS_COMPILE</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>PREFIX<span class="token variable">)</span></span> modules
+
+modules_install:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>ARCH<span class="token variable">)</span></span> <span class="token assign-left variable">INSTALL_MOD_PATH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>MOD_PATH<span class="token variable">)</span></span> modules_install
+
+myinstall:
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.ko /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> clean
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認">動作確認 </h3>
+<h4 id="make-clean">make clean </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ <span class="token function">make</span> clean
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> clean
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+  CLEAN   /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/.tmp_versions
+  CLEAN   /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/Module.symvers
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="make-modules">make modules </h4>
+<div class="admonition warning">
+<p class="admonition-title">「make[2]: 警告: ファイル '/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/leds.o' の修正時刻 20 は未来の時刻です」と表示された場合は chrony を ATDE8 と ArmadilloX1 にインストールすると解決する</p>
+</div>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ make modules </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ <span class="token function">make</span> modules
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">CROSS_COMPILE</span><span class="token operator">=</span>arm-linux-gnueabihf- modules
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+  CC <span class="token punctuation">[</span>M<span class="token punctuation">]</span>  /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/leds.o
+  Building modules, stage <span class="token number">2</span>.
+  MODPOST <span class="token number">1</span> modules
+  LD <span class="token punctuation">[</span>M<span class="token punctuation">]</span>  /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/leds.ko
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-modules_install">sudo make modules_install </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ sudo make modules_install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ <span class="token function">sudo</span> <span class="token function">make</span> modules_install
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">INSTALL_MOD_PATH</span><span class="token operator">=</span>/work/linux/nfsroot modules_install
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+  INSTALL /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/leds.ko
+  DEPMOD  <span class="token number">4.9</span>.133-at27
+depmod: WARNING: could not <span class="token function">open</span> modules.order at /work/linux/nfsroot/lib/modules/4.9.133-at27: No such <span class="token function">file</span> or directory
+depmod: WARNING: could not <span class="token function">open</span> modules.builtin at /work/linux/nfsroot/lib/modules/4.9.133-at27: No such <span class="token function">file</span> or directory
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-myinstall">sudo make myinstall </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ sudo make myinstall </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds$ <span class="token function">sudo</span> <span class="token function">make</span> myinstall
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.ko /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre></details>
+<h4 id="cd">cd </h4>
+<details open=""><summary> root@armadillo:/# cd /lib/modules/4.9.133-at27/extra/ </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/<span class="token comment"># cd /lib/modules/4.9.133-at27/extra/</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre></details>
+<h4 id="insmod">insmod </h4>
+<details open=""><summary> root@armadillo:/lib/modules/4.9.133-at27/extra# insmod leds.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+leds: loading out-of-tree module taints kernel.
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="デバイスファイル">デバイスファイル </h3>
+<h6 id="sysclassledsled_extbrightness">/sys/class/leds/led_ext/brightness </h6>
+<details open=""><summary> echo 255 &gt; /sys/class/leds/led_ext/brightness </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># echo 255 &gt; /sys/class/leds/led_ext/brightness</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre></details>
+<h3 id="実行している様子">実行している様子 </h3>
+<details open=""><summary> LEDデバイスファイルによるLED制御を実行している動画 </summary>
+<p><a href="https://youtu.be/K0L9yKmVo8k">https://youtu.be/K0L9yKmVo8k</a></p>
+<p><video controls="" src="assets/20240703_02led_devicefile.mp4" title="Title" width="1024"></video></p>
+</details>
+<h2 id="例題-ledctl">例題 ledctl </h2>
+<ul>
+<li>引数が指定されない時は LED の点灯状態を表示</li>
+<li>引数を1つ指定すると LED の点灯状態を変更</li>
+</ul>
+<h3 id="ソース-1">ソース </h3>
+<h4 id="ledctlc">ledctl.c </h4>
+<details open=""><summary> 02.led/ldedctl.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fcntl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/types.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/stat.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+
+<span class="token comment">// LED制御用ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">LED_FILE</span>	<span class="token string">"/sys/class/leds/led_ext/brightness"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">DATALEN</span>		<span class="token expression"><span class="token number">16</span></span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> fd<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> val<span class="token punctuation">;</span>
+	<span class="token keyword keyword-char">char</span> <span class="token operator">*</span>p<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> main_ret <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-char">char</span> data<span class="token punctuation">[</span>DATALEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// LED制御用ファイルをオープンします。</span>
+	fd <span class="token operator">=</span> <span class="token function">open</span><span class="token punctuation">(</span>LED_FILE<span class="token punctuation">,</span> O_RDWR<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// オープンに失敗したら、main関数をエラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>fd <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"open"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>argc<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span>
+		<span class="token comment">// LEDの点灯状態をリードします。</span>
+		ret <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> data<span class="token punctuation">,</span> DATALEN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// リードに失敗したら、main関数をエラー終了します。</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"read"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			main_ret <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-goto">goto</span> LED_ERR<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">// LEDの点灯状態を表示します。</span>
+		data<span class="token punctuation">[</span>ret<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'\0'</span><span class="token punctuation">;</span>
+		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"value: %s"</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+		<span class="token comment">// 文字列を数値に変換します。</span>
+		val <span class="token operator">=</span> <span class="token function">strtol</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>p<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// 変換に失敗したら、main関数をエラー終了します。</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>p <span class="token operator">!=</span> <span class="token char">'\0'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"invalid number\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			main_ret <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-goto">goto</span> LED_ERR<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 数値が2バイトの範囲内でなければ、main関数をエラー終了します。</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>val <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> val <span class="token operator">&gt;</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"out of range\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			main_ret <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-goto">goto</span> LED_ERR<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 数値を文字列に変換します。</span>
+		n <span class="token operator">=</span> <span class="token function">sprintf</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token string">"%d"</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// LEDを点灯/消灯させます。</span>
+		ret <span class="token operator">=</span> <span class="token function">write</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> data<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// ライトに失敗したら、main関数をエラー終了します。</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"write"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			main_ret <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-goto">goto</span> LED_ERR<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+		<span class="token comment">// 引数の数が指定どおりでない場合、main関数をエラー終了します。</span>
+		<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"Usage: %s [value]\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		main_ret <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+LED_ERR<span class="token operator">:</span>
+	<span class="token comment">// LED制御用ファイルをクローズします。</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>fd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-return">return</span> main_ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile-1">Makefile </h4>
+<details open=""><summary> 02.led/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>CC <span class="token operator">=</span> arm-linux-gnueabihf-gcc
+<span class="token comment">#TARGET = ledctl ldmeter</span>
+TARGET <span class="token operator">=</span> ledctl  <span class="token operator">&lt;</span>───── その都度変更
+CFLAGS <span class="token operator">=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+all: <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+install:
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>   /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>   /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認-1">動作確認 </h3>
+<h4 id="make-clean-1">make clean </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">make</span> clean
+<span class="token function">rm</span> <span class="token parameter variable">-f</span> ledctl
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="make">make </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ make </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">make</span>
+arm-linux-gnueabihf-gcc -gdwarf-2 <span class="token parameter variable">-O0</span>    ledctl.c   <span class="token parameter variable">-o</span> ledctl
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-install">sudo make install </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ sudo make install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ledctl   /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ledctl   /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ledctl.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="csideでロード">CSIDEでロード </h4>
+<details open=""><summary> メニュー「ファイル」-「ロード」</summary>
+<p><img src="assets/2024-07-04_11-53-52.png" alt="alt text"></p>
+</details>
+<h4 id="insmod既にinsmod-済みなら割愛">insmod（既にinsmod 済みなら割愛） </h4>
+<details open=""><summary> root@armadillo:/lib/modules/4.9.133-at27/extra# insmod leds.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># cd /lib/modules/4.9.133-at27/extra/</span>
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># ls</span>
+leds.ko
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment">#</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行している様子-1">実行している様子 </h4>
+<details open=""><summary> ledctrl による LED 制御を実行している動画 </summary>
+<p><a href="https://youtu.be/zoULMecAvbw">https://youtu.be/zoULMecAvbw</a></p>
+<p><video controls="" src="assets/20240703_02led_ledctl.mp4" title="Title" width="1024"></video></p>
+</details>
+<h2 id="課題-負荷表示器-ldmeter">課題 負荷表示器 ldmeter </h2>
+<ul>
+<li>システムの負荷をLEDに表示</li>
+<li>システムの負荷情報は /proc/loadavg ファイルから取得</li>
+<li>1分間の平均値を取得してLED上に表示</li>
+<li>LED表示は1秒ごとに更新</li>
+</ul>
+<h4 id="負荷情報の取得">負荷情報の取得 </h4>
+<details open=""><summary> root@armadillo:/debug/04_practice# cat /proc/loadavg </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># cat /proc/loadavg</span>
+<span class="token number">0.00</span> <span class="token number">0.00</span> <span class="token number">0.03</span> <span class="token number">1</span>/133 <span class="token number">3076</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><p>実行可能なプロセス数の1分間の平均値、5分間、15分間、現在実行中のプロセス数/存在する全プロセス数、最新のプロセスID</p>
+</details>
+<h4 id="負荷情報に対するledの状態">負荷情報に対するLEDの状態 </h4>
+<table>
+<thead>
+<tr>
+<th>1min Avg</th>
+<th>LED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00-0.12</td>
+<td>ALL OFF</td>
+</tr>
+<tr>
+<td>0.12-0.24</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0.24-0.36</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>0.36-0.48</td>
+<td>1-3</td>
+</tr>
+<tr>
+<td>0.48-0.60</td>
+<td>1-4</td>
+</tr>
+<tr>
+<td>0.60-0.72</td>
+<td>1-5</td>
+</tr>
+<tr>
+<td>0.72-0.84</td>
+<td>1-6</td>
+</tr>
+<tr>
+<td>0.84-0.96</td>
+<td>1-7</td>
+</tr>
+<tr>
+<td>0.96 over</td>
+<td>ALL ON</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ソース-2">ソース </h3>
+<h4 id="ldmeterc">ldmeter.c </h4>
+<details open=""><summary> 02.led/ldmeter.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fcntl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/types.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/stat.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+
+<span class="token comment">// LED制御用ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED_FILE</span>	<span class="token string">"/sys/class/leds/led_ext/brightness"</span></span>
+<span class="token comment">// 負荷情報ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">LOADAVG_FILE</span>	<span class="token string">"/proc/loadavg"</span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+
+
+
+
+
+	<span class="token comment">// 負荷情報ファイルをオープンします。</span>
+
+
+
+
+
+
+
+	<span class="token comment">// LED制御用ファイルをオープンします。</span>
+
+
+
+
+
+
+
+
+
+		<span class="token comment">// 負荷情報をリードします。</span>
+
+
+
+
+
+
+
+
+
+		<span class="token comment">// 負荷情報を数値に変換します。</span>
+
+
+
+
+
+
+
+
+		<span class="token comment">// 負荷情報から、どのLEDを点灯させるのかを決定します。</span>
+
+
+
+
+
+
+
+		<span class="token comment">// LEDを点灯させます。</span>
+
+		<span class="token comment">// 1秒間待ちます。</span>
+		<span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+LOAD_ERR<span class="token operator">:</span>
+	<span class="token comment">// 負荷情報ファイルをクローズします。</span>
+
+LED_ERR<span class="token operator">:</span>
+	<span class="token comment">// LED制御用ファイルをクローズします。</span>
+
+	<span class="token keyword keyword-return">return</span> main_ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile-2">Makefile </h4>
+<details open=""><summary> 02.led/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>CC <span class="token operator">=</span> arm-linux-gnueabihf-gcc
+<span class="token comment">#TARGET = ledctl ldmeter</span>
+TARGET <span class="token operator">=</span> ldmeter <span class="token operator">&lt;</span>───── その都度変更
+CFLAGS <span class="token operator">=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+all: <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+install:
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>   /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>   /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認-2">動作確認 </h3>
+<h4 id="make-clean-2">make clean </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">make</span> clean
+<span class="token function">rm</span> <span class="token parameter variable">-f</span> ldmeter
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="make-1">make </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ make </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">make</span>
+arm-linux-gnueabihf-gcc -gdwarf-2 <span class="token parameter variable">-O0</span>    ldmeter.c   <span class="token parameter variable">-o</span> ldmeter
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-install-1">sudo make install </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ sudo make install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ldmeter   /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ldmeter   /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> ldmeter.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="csideでロード-1">CSIDEでロード </h4>
+<details open=""><summary> メニュー「ファイル」-「ロード」</summary>
+<p><img src="assets/2024-07-04_13-58-16.png" alt="alt text"></p>
+</details>
+<h4 id="insmod既にinsmod-済みなら割愛-1">insmod（既にinsmod 済みなら割愛） </h4>
+<details open=""><summary> root@armadillo:/lib/modules/4.9.133-at27/extra# insmod leds.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:~<span class="token comment"># cd /lib/modules/4.9.133-at27/extra/</span>
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># ls</span>
+leds.ko
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment">#</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行">実行 </h4>
+<h5 id="ldmeter-">./ldmeter &amp; </h5>
+<details open=""><summary> root@armadillo:/debug/04_practice# ./ldmeter &amp; </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># ./ldmeter &amp;</span>
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token number">3046</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h5 id="cpu-へ負荷">CPU へ負荷 </h5>
+<details open=""><summary> root@armadillo:/debug/04_practice# while true; do echo dummy &gt; /dev/null ; done </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># while true; do echo dummy &gt; /dev/null ; done</span>
+^Cdummy  <span class="token operator">&lt;</span>───── ctrl ∔ c
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h5 id="kill-3046">kill 3046 </h5>
+<details open=""><summary> root@armadillo:/debug/04_practice# kill 3046 </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># ps</span>
+  PID TTY          TIME CMD
+ <span class="token number">2980</span> pts/0    00:03:06 <span class="token function">bash</span>
+ <span class="token number">3046</span> pts/0    00:00:00 ldmeter
+ <span class="token number">3055</span> pts/0    00:00:00 <span class="token function">ps</span>
+
+root@armadillo:/debug/04_practice<span class="token comment"># kill 3046</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行している様子-2">実行している様子 </h4>
+<details open=""><summary> ldmeter による LED レベルメータ表示の動画 </summary>
+<p><a href="https://youtu.be/vxxYnZIT9bM">https://youtu.be/vxxYnZIT9bM</a></p>
+<p><video controls="" src="assets/20240704_02led_ldmeter.mp4" title="Title" width="1024"></video></p>
+</details>
+<h4 id="ヒント">ヒント </h4>
+<p>sscanf, sleep</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
