@@ -3,7 +3,6 @@ I:\OneNoteMarkDownWork\MarkDownWork\R06_2023\kyozai\0102_EmbeddedSystemArchitect
 35本の動画
 
 YouYube
-02.led
 20240703_02led_devicefile.mp4   https://youtu.be/K0L9yKmVo8k
 20240703_02led_ledctl.mp4   https://youtu.be/zoULMecAvbw
 20240704_02led_ldmeter.mp4  https://youtu.be/vxxYnZIT9bM
@@ -45,3 +44,7 @@ YouYube
 
 20240715_Nginx_chrome_devctl.mp4    https://youtu.be/JNXQb-oGVOM
 20240715_Nginx_curl_devctl.mp4  https://youtu.be/DFiZbdZ-sTE
+
+20240718_fbdisp_jpeg.mp4	https://youtu.be/up1xuboWB9M
+
+https://github.com/cpceigit2024/EmbeddedLinux
