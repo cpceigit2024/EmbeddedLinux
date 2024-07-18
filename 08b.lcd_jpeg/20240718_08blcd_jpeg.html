@@ -1,0 +1,705 @@
+<!DOCTYPE html><html><head>
+      <title>20240718_08blcd_jpeg</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\sfujimoto\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+body {
+  counter-reset: chapter;
+}
+h1 {
+  counter-reset: sub-chapter;
+}
+h2 {
+  counter-reset: section;
+}
+h3 {
+  counter-reset: sub-section;
+}
+h4 {
+  counter-reset: sub-sub-section;
+}
+div.TOC ul {
+  counter-reset: section;
+}
+.markdown-preview.markdown-preview h1 {
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+}
+.markdown-preview.markdown-preview h2 {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+.markdown-preview.markdown-preview h3 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+.markdown-preview.markdown-preview h4 {
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+}
+.markdown-preview.markdown-preview h4:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #5472cd;
+  bottom: -3px;
+  width: 20%;
+}
+.markdown-preview.markdown-preview h5 {
+  border-bottom: solid 3px black;
+}
+.markdown-preview.markdown-preview h1::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+.markdown-preview.markdown-preview h2::before {
+  counter-increment: sub-chapter;
+  content: counter(chapter) "." counter(sub-chapter) ". ";
+}
+.markdown-preview.markdown-preview h3::before {
+  counter-increment: section;
+  content: counter(chapter) "." counter(sub-chapter) "." counter(section) ". ";
+}
+.markdown-preview.markdown-preview h4::before {
+  counter-increment: sub-section;
+}
+.markdown-preview.markdown-preview h5::before {
+  counter-increment: sub-sub-section;
+}
+.markdown-preview.markdown-preview div.TOC li {
+  list-style: none;
+}
+.markdown-preview.markdown-preview div.TOC ul > li:before {
+  counter-increment: section;
+  content: counters(section, '.') '. ';
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="08blcd_jpeg">08b.lcd_jpeg </h1>
+<p><a href="">2024/7/18 Table of Contents</a></p>
+<div class="TOC">
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ol>
+<li><a href="#08blcd_jpeg">08b.lcd_jpeg</a>
+<ol>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+<li><a href="#%E6%A7%8B%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF">構成データ</a></li>
+<li><a href="#-ljpeg-%E3%81%AB%E3%82%88%E3%82%8B-lcd-%E3%81%B8%E3%81%AE-jpeg-%E7%94%BB%E5%83%8F%E8%A1%A8%E7%A4%BA">-ljpeg による LCD への jpeg 画像表示</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<div style="page-break-before:always"></div>  <!-- PDFで改ページ-->
+<h2 id="目的">目的 </h2>
+<p>組込みアプリケーション開発 08b.lcd_jpeg</p>
+<h2 id="構成データ">構成データ </h2>
+<h3 id="mediasf_armadillox1hwpwmworkr06_2024apllication_debugtextpractice-ディレクトリ">/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Apllication_debug/text/practice ディレクトリ </h3>
+<details open=""><summary> ･･･/share/ArmadilloX1/hwpwm/<span style="color: red">work</span>/R06_2024/Application<span style="color: red">_debug</span>/<span style="color: red">text</span>/practice/ の構成</summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>user@1204PC-Z490M:/mnt/v/VirtualBoxWork/share/ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice$ tree <span class="token parameter variable">-aF</span> <span class="token parameter variable">-L</span> <span class="token number">3</span>
+./
+├── Makefile*
+├── fbdisp_jpeg*
+├── fbdisp_jpeg.c*
+└── image/
+    ├── cosmos2-svga.jpg*
+    ├── higan2-svga.jpg*
+    ├── himawari1-svga.jpg*
+    ├── karashina2-svga.jpg*
+    ├── momo2-svga.jpg*
+    ├── sakura2-svga.jpg*
+    └── ume2-svga.jpg*
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h2 id="-ljpeg-による-lcd-への-jpeg-画像表示">-ljpeg による LCD への jpeg 画像表示 </h2>
+<p><a href="https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/">Index of /debian/pool/main/libj/libjpeg-turbo ダウンロードサイト</a></p>
+<h3 id="必要なパッケージ">必要なパッケージ </h3>
+<table>
+<thead>
+<tr>
+<th>パッケージ名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dpkg-cross</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>ダウンロードするパッケージ名</th>
+<th colspan="2">$ dpkg-cross --build --arch armhf -M *.deb で生成</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>libjpeg62-turbo_1.5.1-2_armhf.deb</td>
+<td>-&gt;</td>
+<td>libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb</td>
+</tr>
+<tr>
+<td>libjpeg62-turbo-dev_1.5.1-2_armhf.deb</td>
+<td>-&gt;</td>
+<td>libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb</td>
+</tr>
+</tbody>
+</table>
+<details open=""><summary> https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/ </summary>
+<p><img src="assets/2024-07-18_19-01-42.png" alt="alt text"></p>
+</details>
+<h3 id="環境構築">環境構築 </h3>
+<p>1．ホームディレクトリに必要なパッケージのダウンロード&amp;インストール</p>
+<ol>
+<li>クロスコンパイル</li>
+<li>クロスコンパイル後に生成したパッケージをインストール</li>
+</ol>
+<h4 id="ホームディレクトリに必要なパッケージのダウンロードインストール">ホームディレクトリに必要なパッケージのダウンロード&amp;インストール </h4>
+<h5 id="-sudo-apt-install-dpkg-cross">$ sudo apt install dpkg-cross </h5>
+<details open=""><summary> atmark@atde8:~$ ls </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">ls</span>
+initramfs_x1-v2.1.1.cpio.gz            linux-4.9-x1-at27_dbg_myhwpwm         motor_mynishitaihwpwm.ko  work_debug_hwpwm  デスクトップ  音楽
+initramfs_x1-v2.1.1.cpio.gz_dbg_hdpwm  linux-4.9-x1-at27_dbg_myhwpwm.tar.gz  uboot_2016.07-at23_dbg    ダウンロード      ドキュメント  画像
+linux-4.9-x1-at27_dbg                  linux-4.9-x1-at27_dbg_org             vbox_share_mp_hwpwm       テンプレート      ビデオ        公開
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre></details>
+<details open=""><summary> atmark@atde8:~$ sudo apt install dpkg-cross </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> dpkg-cross
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+パッケージリストを読み込んでいます<span class="token punctuation">..</span>. 完了
+依存関係ツリーを作成しています
+状態情報を読み取っています<span class="token punctuation">..</span>. 完了
+以下のパッケージが自動でインストールされましたが、もう必要とされていません:
+  libevent-core-2.1-6 libevent-pthreads-2.1-6 linux-headers-4.19.0-22-amd64 linux-headers-4.19.0-22-common linux-headers-4.19.0-23-amd64 linux-headers-4.19.0-23-common
+  linux-image-4.19.0-22-amd64 linux-image-4.19.0-23-amd64 sntp
+これを削除するには <span class="token string">'sudo apt autoremove'</span> を利用してください。
+以下の追加パッケージがインストールされます:
+  cross-config libconfig-auto-perl libconfig-inifiles-perl libdebian-dpkgcross-perl libfile-homedir-perl libfile-which-perl libio-string-perl libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-simple-perl
+提案パッケージ:
+  binutils-multiarch libxml-sax-expatxs-perl
+以下のパッケージが新たにインストールされます:
+  cross-config dpkg-cross libconfig-auto-perl libconfig-inifiles-perl libdebian-dpkgcross-perl libfile-homedir-perl libfile-which-perl libio-string-perl libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-simple-perl
+アップグレード: <span class="token number">0</span> 個、新規インストール: <span class="token number">14</span> 個、削除: <span class="token number">0</span> 個、保留: <span class="token number">0</span> 個。
+<span class="token number">793</span> kB のアーカイブを取得する必要があります。
+この操作後に追加で <span class="token number">2,350</span> kB のディスク容量が消費されます。
+続行しますか? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span> Y
+取得:1 http://ftp.jp.debian.org/debian buster/main amd64 cross-config all <span class="token number">2.6</span>.15-3 <span class="token punctuation">[</span><span class="token number">39.9</span> kB<span class="token punctuation">]</span>
+取得:2 http://ftp.jp.debian.org/debian buster/main amd64 libconfig-inifiles-perl all <span class="token number">3.000001</span>-1 <span class="token punctuation">[</span><span class="token number">51.9</span> kB<span class="token punctuation">]</span>
+取得:3 http://ftp.jp.debian.org/debian buster/main amd64 libio-string-perl all <span class="token number">1.08</span>-3 <span class="token punctuation">[</span><span class="token number">12.3</span> kB<span class="token punctuation">]</span>
+取得:4 http://ftp.jp.debian.org/debian buster/main amd64 libxml-namespacesupport-perl all <span class="token number">1.12</span>-1 <span class="token punctuation">[</span><span class="token number">14.8</span> kB<span class="token punctuation">]</span>
+取得:5 http://ftp.jp.debian.org/debian buster/main amd64 libxml-sax-base-perl all <span class="token number">1.09</span>-1 <span class="token punctuation">[</span><span class="token number">20.4</span> kB<span class="token punctuation">]</span>
+取得:6 http://ftp.jp.debian.org/debian buster/main amd64 libxml-sax-perl all <span class="token number">1.00</span>+dfsg-1 <span class="token punctuation">[</span><span class="token number">58.6</span> kB<span class="token punctuation">]</span>
+取得:7 http://ftp.jp.debian.org/debian buster/main amd64 libxml-libxml-perl amd64 <span class="token number">2.0134</span>+dfsg-1 <span class="token punctuation">[</span><span class="token number">344</span> kB<span class="token punctuation">]</span>
+取得:8 http://ftp.jp.debian.org/debian buster/main amd64 libxml-sax-expat-perl all <span class="token number">0.51</span>-1 <span class="token punctuation">[</span><span class="token number">12.0</span> kB<span class="token punctuation">]</span>
+取得:9 http://ftp.jp.debian.org/debian buster/main amd64 libxml-simple-perl all <span class="token number">2.25</span>-1 <span class="token punctuation">[</span><span class="token number">72.0</span> kB<span class="token punctuation">]</span>
+取得:10 http://ftp.jp.debian.org/debian buster/main amd64 libconfig-auto-perl all <span class="token number">0.44</span>-1 <span class="token punctuation">[</span><span class="token number">19.5</span> kB<span class="token punctuation">]</span>
+取得:11 http://ftp.jp.debian.org/debian buster/main amd64 libfile-which-perl all <span class="token number">1.23</span>-1 <span class="token punctuation">[</span><span class="token number">16.6</span> kB<span class="token punctuation">]</span>
+取得:12 http://ftp.jp.debian.org/debian buster/main amd64 libfile-homedir-perl all <span class="token number">1.004</span>-1 <span class="token punctuation">[</span><span class="token number">42.7</span> kB<span class="token punctuation">]</span>
+取得:13 http://ftp.jp.debian.org/debian buster/main amd64 libdebian-dpkgcross-perl all <span class="token number">2.6</span>.15-3 <span class="token punctuation">[</span><span class="token number">38.7</span> kB<span class="token punctuation">]</span>
+取得:14 http://ftp.jp.debian.org/debian buster/main amd64 dpkg-cross all <span class="token number">2.6</span>.15-3 <span class="token punctuation">[</span><span class="token number">49.3</span> kB<span class="token punctuation">]</span>
+<span class="token number">793</span> kB を <span class="token number">1</span>秒 で取得しました <span class="token punctuation">(</span><span class="token number">1,120</span> kB/s<span class="token punctuation">)</span>
+以前に未選択のパッケージ cross-config を選択しています。
+<span class="token punctuation">(</span>データベースを読み込んでいます <span class="token punctuation">..</span>. 現在 <span class="token number">222687</span> 個のファイルとディレクトリがインストールされています。<span class="token punctuation">)</span>
+<span class="token punctuation">..</span>./00-cross-config_2.6.15-3_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+cross-config <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libconfig-inifiles-perl を選択しています。
+<span class="token punctuation">..</span>./01-libconfig-inifiles-perl_3.000001-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libconfig-inifiles-perl <span class="token punctuation">(</span><span class="token number">3.000001</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libio-string-perl を選択しています。
+<span class="token punctuation">..</span>./02-libio-string-perl_1.08-3_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libio-string-perl <span class="token punctuation">(</span><span class="token number">1.08</span>-3<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-namespacesupport-perl を選択しています。
+<span class="token punctuation">..</span>./03-libxml-namespacesupport-perl_1.12-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-namespacesupport-perl <span class="token punctuation">(</span><span class="token number">1.12</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-sax-base-perl を選択しています。
+<span class="token punctuation">..</span>./04-libxml-sax-base-perl_1.09-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-sax-base-perl <span class="token punctuation">(</span><span class="token number">1.09</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-sax-perl を選択しています。
+<span class="token punctuation">..</span>./05-libxml-sax-perl_1.00+dfsg-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-sax-perl <span class="token punctuation">(</span><span class="token number">1.00</span>+dfsg-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-libxml-perl を選択しています。
+<span class="token punctuation">..</span>./06-libxml-libxml-perl_2.0134+dfsg-1_amd64.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-libxml-perl <span class="token punctuation">(</span><span class="token number">2.0134</span>+dfsg-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-sax-expat-perl を選択しています。
+<span class="token punctuation">..</span>./07-libxml-sax-expat-perl_0.51-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-sax-expat-perl <span class="token punctuation">(</span><span class="token number">0.51</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libxml-simple-perl を選択しています。
+<span class="token punctuation">..</span>./08-libxml-simple-perl_2.25-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libxml-simple-perl <span class="token punctuation">(</span><span class="token number">2.25</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libconfig-auto-perl を選択しています。
+<span class="token punctuation">..</span>./09-libconfig-auto-perl_0.44-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libconfig-auto-perl <span class="token punctuation">(</span><span class="token number">0.44</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libfile-which-perl を選択しています。
+<span class="token punctuation">..</span>./10-libfile-which-perl_1.23-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libfile-which-perl <span class="token punctuation">(</span><span class="token number">1.23</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libfile-homedir-perl を選択しています。
+<span class="token punctuation">..</span>./11-libfile-homedir-perl_1.004-1_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libfile-homedir-perl <span class="token punctuation">(</span><span class="token number">1.004</span>-1<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ libdebian-dpkgcross-perl を選択しています。
+<span class="token punctuation">..</span>./12-libdebian-dpkgcross-perl_2.6.15-3_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libdebian-dpkgcross-perl <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+以前に未選択のパッケージ dpkg-cross を選択しています。
+<span class="token punctuation">..</span>./13-dpkg-cross_2.6.15-3_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+dpkg-cross <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+libconfig-inifiles-perl <span class="token punctuation">(</span><span class="token number">3.000001</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libfile-which-perl <span class="token punctuation">(</span><span class="token number">1.23</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libxml-namespacesupport-perl <span class="token punctuation">(</span><span class="token number">1.12</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libxml-sax-base-perl <span class="token punctuation">(</span><span class="token number">1.09</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libio-string-perl <span class="token punctuation">(</span><span class="token number">1.08</span>-3<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+cross-config <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libfile-homedir-perl <span class="token punctuation">(</span><span class="token number">1.004</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libxml-sax-perl <span class="token punctuation">(</span><span class="token number">1.00</span>+dfsg-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::PurePerl with priority <span class="token number">10</span><span class="token punctuation">..</span>.
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file<span class="token punctuation">..</span>.
+
+Creating config <span class="token function">file</span> /etc/perl/XML/SAX/ParserDetails.ini with new version
+libxml-libxml-perl <span class="token punctuation">(</span><span class="token number">2.0134</span>+dfsg-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX::Parser with priority <span class="token number">50</span><span class="token punctuation">..</span>.
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX with priority <span class="token number">50</span><span class="token punctuation">..</span>.
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file<span class="token punctuation">..</span>.
+Replacing config <span class="token function">file</span> /etc/perl/XML/SAX/ParserDetails.ini with new version
+libxml-sax-expat-perl <span class="token punctuation">(</span><span class="token number">0.51</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::Expat with priority <span class="token number">50</span><span class="token punctuation">..</span>.
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file<span class="token punctuation">..</span>.
+Replacing config <span class="token function">file</span> /etc/perl/XML/SAX/ParserDetails.ini with new version
+libxml-simple-perl <span class="token punctuation">(</span><span class="token number">2.25</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libconfig-auto-perl <span class="token punctuation">(</span><span class="token number">0.44</span>-1<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+libdebian-dpkgcross-perl <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+dpkg-cross <span class="token punctuation">(</span><span class="token number">2.6</span>.15-3<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+man-db <span class="token punctuation">(</span><span class="token number">2.8</span>.5-2+deb10u1<span class="token punctuation">)</span> のトリガを処理しています <span class="token punctuation">..</span>.
+atmark@atde8:~$
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h5 id="libjpeg62-turbo_151-2_armhfdeb-のダウンロード">libjpeg62-turbo_1.5.1-2_armhf.deb のダウンロード </h5>
+<details open=""><summary> atmark@atde8:~$ wget https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_armhf.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">wget</span> https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_armhf.deb
+--2024-07-18 <span class="token number">19</span>:22:10--  https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_armhf.deb
+archive.debian.org <span class="token punctuation">(</span>archive.debian.org<span class="token punctuation">)</span> をDNSに問いあわせています<span class="token punctuation">..</span>. <span class="token number">151.101</span>.2.132, <span class="token number">151.101</span>.194.132, <span class="token number">151.101</span>.66.132, <span class="token punctuation">..</span>.
+archive.debian.org <span class="token punctuation">(</span>archive.debian.org<span class="token punctuation">)</span><span class="token operator">|</span><span class="token number">151.101</span>.2.132<span class="token operator">|</span>:443 に接続しています<span class="token punctuation">..</span>. 接続しました。
+HTTP による接続要求を送信しました、応答を待っています<span class="token punctuation">..</span>. <span class="token number">200</span> OK
+長さ: <span class="token number">111400</span> <span class="token punctuation">(</span>109K<span class="token punctuation">)</span> <span class="token punctuation">[</span>application/vnd.debian.binary-package<span class="token punctuation">]</span>
+<span class="token variable"><span class="token variable">`</span>libjpeg62-turbo_1.5.1-2_armhf.deb' に保存中
+
+libjpeg62-turbo_1.5.1-2_armhf.deb            <span class="token number">100</span>%<span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token number">108</span>.79K   408KB/s 時間 <span class="token number">0</span>.3s
+
+<span class="token number">2024</span>-07-18 <span class="token number">19</span>:22:10 <span class="token punctuation">(</span><span class="token number">408</span> KB/s<span class="token punctuation">)</span> - <span class="token variable">`</span></span>libjpeg62-turbo_1.5.1-2_armhf.deb' へ保存完了 <span class="token punctuation">[</span><span class="token number">111400</span>/111400<span class="token punctuation">]</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h5 id="libjpeg62-turbo-dev_151-2_armhfdeb-のダウンロード">libjpeg62-turbo-dev_1.5.1-2_armhf.deb のダウンロード </h5>
+<details open=""><summary> atmark@atde8:~$ wget https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo-dev_1.5.1-2_armhf.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">wget</span> https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo-dev_1.5.1-2_armhf.deb
+--2024-07-18 <span class="token number">19</span>:23:26--  https://archive.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo-dev_1.5.1-2_armhf.deb
+archive.debian.org <span class="token punctuation">(</span>archive.debian.org<span class="token punctuation">)</span> をDNSに問いあわせています<span class="token punctuation">..</span>. <span class="token number">151.101</span>.194.132, <span class="token number">151.101</span>.66.132, <span class="token number">151.101</span>.130.132, <span class="token punctuation">..</span>.
+archive.debian.org <span class="token punctuation">(</span>archive.debian.org<span class="token punctuation">)</span><span class="token operator">|</span><span class="token number">151.101</span>.194.132<span class="token operator">|</span>:443 に接続しています<span class="token punctuation">..</span>. 接続しました。
+HTTP による接続要求を送信しました、応答を待っています<span class="token punctuation">..</span>. <span class="token number">200</span> OK
+長さ: <span class="token number">182840</span> <span class="token punctuation">(</span>179K<span class="token punctuation">)</span> <span class="token punctuation">[</span>application/vnd.debian.binary-package<span class="token punctuation">]</span>
+<span class="token variable"><span class="token variable">`</span>libjpeg62-turbo-dev_1.5.1-2_armhf.deb' に保存中
+
+libjpeg62-turbo-dev_1.5.1-2_armhf.deb        <span class="token number">100</span>%<span class="token punctuation">[</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token number">178</span>.55K   514KB/s 時間 <span class="token number">0</span>.3s
+
+<span class="token number">2024</span>-07-18 <span class="token number">19</span>:23:27 <span class="token punctuation">(</span><span class="token number">514</span> KB/s<span class="token punctuation">)</span> - <span class="token variable">`</span></span>libjpeg62-turbo-dev_1.5.1-2_armhf.deb' へ保存完了 <span class="token punctuation">[</span><span class="token number">182840</span>/182840<span class="token punctuation">]</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<details open=""><summary> atmark@atde8:~$ ls -al libjpeg* </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">ls</span> <span class="token parameter variable">-al</span> libjpeg*
+-rw-r--r-- <span class="token number">1</span> atmark atmark <span class="token number">182840</span> <span class="token number">10</span>月 <span class="token number">21</span>  <span class="token number">2016</span> libjpeg62-turbo-dev_1.5.1-2_armhf.deb
+-rw-r--r-- <span class="token number">1</span> atmark atmark <span class="token number">111400</span> <span class="token number">10</span>月 <span class="token number">21</span>  <span class="token number">2016</span> libjpeg62-turbo_1.5.1-2_armhf.deb
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre></details>
+<h4 id="クロスコンパイル">クロスコンパイル </h4>
+<h5 id="libjpeg62-turbo-armhf-cross_151-2_alldeb-を生成">libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb を生成 </h5>
+<details open=""><summary> atmark@atde8:~$ dpkg-cross --build --arch armhf -M libjpeg62-turbo_1.5.1-2_armhf.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ dpkg-cross <span class="token parameter variable">--build</span> <span class="token parameter variable">--arch</span> armhf <span class="token parameter variable">-M</span> libjpeg62-turbo_1.5.1-2_armhf.deb
+dpkg-cross: Multi-Arch package detected<span class="token punctuation">;</span> processing anyway as --convert-multiarch specified.
+Building libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb
+dpkg-deb: building package <span class="token string">'libjpeg62-turbo-armhf-cross'</span> <span class="token keyword keyword-in">in</span> <span class="token string">'./libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb'</span><span class="token builtin class-name">.</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre></details>
+<h5 id="libjpeg62-turbo-dev-armhf-cross_151-2_alldeb-を生成">libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb を生成 </h5>
+<details open=""><summary> atmark@atde8:~$ dpkg-cross --build --arch armhf -M libjpeg62-turbo-dev_1.5.1-2_armhf.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ dpkg-cross <span class="token parameter variable">--build</span> <span class="token parameter variable">--arch</span> armhf <span class="token parameter variable">-M</span> libjpeg62-turbo-dev_1.5.1-2_armhf.deb
+dpkg-cross: Multi-Arch package detected<span class="token punctuation">;</span> processing anyway as --convert-multiarch specified.
+Building libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb
+dpkg-deb: building package <span class="token string">'libjpeg62-turbo-dev-armhf-cross'</span> <span class="token keyword keyword-in">in</span> <span class="token string">'./libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb'</span><span class="token builtin class-name">.</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre></details>
+<details open=""><summary> atmark@atde8:~$ ls -al libjpeg* </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">ls</span> <span class="token parameter variable">-al</span> libjpeg*
+-rw-r--r-- <span class="token number">1</span> atmark atmark  <span class="token number">84956</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:30 libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb
+-rw-r--r-- <span class="token number">1</span> atmark atmark <span class="token number">116128</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:29 libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb
+-rw-r--r-- <span class="token number">1</span> atmark atmark <span class="token number">182840</span> <span class="token number">10</span>月 <span class="token number">21</span>  <span class="token number">2016</span> libjpeg62-turbo-dev_1.5.1-2_armhf.deb
+-rw-r--r-- <span class="token number">1</span> atmark atmark <span class="token number">111400</span> <span class="token number">10</span>月 <span class="token number">21</span>  <span class="token number">2016</span> libjpeg62-turbo_1.5.1-2_armhf.deb
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="クロスコンパイル後に生成したパッケージをインストール">クロスコンパイル後に生成したパッケージをインストール </h4>
+<h5 id="-sudo-dpkg--i-libjpeg62-turbo-armhf-cross_151-2_alldeb">$ sudo dpkg -i libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb </h5>
+<details open=""><summary> atmark@atde8:~$ sudo dpkg -i libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb
+以前に未選択のパッケージ libjpeg62-turbo-armhf-cross を選択しています。
+<span class="token punctuation">(</span>データベースを読み込んでいます <span class="token punctuation">..</span>. 現在 <span class="token number">222997</span> 個のファイルとディレクトリがインストールされています。<span class="token punctuation">)</span>
+libjpeg62-turbo-armhf-cross_1.5.1-2_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libjpeg62-turbo-armhf-cross <span class="token punctuation">(</span><span class="token number">1</span>:1.5.1-2<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+libjpeg62-turbo-armhf-cross <span class="token punctuation">(</span><span class="token number">1</span>:1.5.1-2<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h5 id="-sudo-dpkg--i-libjpeg62-turbo-dev-armhf-cross_151-2_alldeb">$ sudo dpkg -i libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb </h5>
+<details open=""><summary> atmark@atde8:~$ sudo dpkg -i libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb
+以前に未選択のパッケージ libjpeg62-turbo-dev-armhf-cross を選択しています。
+<span class="token punctuation">(</span>データベースを読み込んでいます <span class="token punctuation">..</span>. 現在 <span class="token number">223001</span> 個のファイルとディレクトリがインストールされています。<span class="token punctuation">)</span>
+libjpeg62-turbo-dev-armhf-cross_1.5.1-2_all.deb を展開する準備をしています <span class="token punctuation">..</span>.
+libjpeg62-turbo-dev-armhf-cross <span class="token punctuation">(</span><span class="token number">1</span>:1.5.1-2<span class="token punctuation">)</span> を展開しています<span class="token punctuation">..</span>.
+libjpeg62-turbo-dev-armhf-cross <span class="token punctuation">(</span><span class="token number">1</span>:1.5.1-2<span class="token punctuation">)</span> を設定しています <span class="token punctuation">..</span>.
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="-ljpeg-のテスト">-ljpeg のテスト </h4>
+<h5 id="08blcdjpegfbdisp_jpegc">08b.lcdjpeg/fbdisp_jpeg.c </h5>
+<details open=""><summary> 08b.lcdjpeg/fbdisp_jpeg.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token comment">/*
+ * fbdisp_jpeg.c
+ */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fcntl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/fb.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/mman.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/ioctl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;jpeglib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">DEVICE_NAME</span> <span class="token string">"/dev/fb0"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">DIV_BYTE</span> <span class="token expression"><span class="token number">8</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_RED</span>	<span class="token expression"><span class="token number">0xff0000</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_GREEN</span>	<span class="token expression"><span class="token number">0x00ff00</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_BLUE</span>	<span class="token expression"><span class="token number">0x0000ff</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_WHITE</span>	<span class="token expression"><span class="token number">0xffffff</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_BLACK</span>	<span class="token expression"><span class="token number">0x000000</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_YELLOW</span>	<span class="token expression"><span class="token number">0xffff00</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_CYAN</span>	<span class="token expression"><span class="token number">0x00ffff</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">COLOR_MAZENTA</span>	<span class="token expression"><span class="token number">0xff00ff</span></span></span>
+
+<span class="token comment">/* function prototype */</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">send_current_information</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	FILE            <span class="token operator">*</span>fp<span class="token punctuation">;</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">jpeg_decompress_struct</span> cinfo<span class="token punctuation">;</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">jpeg_error_mgr</span> jerr<span class="token punctuation">;</span>
+	JSAMPARRAY img<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>p<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> width<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> height<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-int">int</span> fd_framebuffer <span class="token punctuation">;</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">fb_var_screeninfo</span> vinfo<span class="token punctuation">;</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">fb_fix_screeninfo</span> finfo<span class="token punctuation">;</span>
+	<span class="token keyword keyword-long">long</span> <span class="token keyword keyword-int">int</span> screensize <span class="token punctuation">;</span>
+	<span class="token keyword keyword-long">long</span> <span class="token keyword keyword-int">int</span> location<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> <span class="token operator">*</span>fbptr <span class="token punctuation">;</span>
+	<span class="token keyword keyword-char">char</span> tmp<span class="token punctuation">[</span>DIV_BYTE<span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-int">int</span> x1 <span class="token punctuation">,</span> y1 <span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> xres<span class="token punctuation">,</span>yres<span class="token punctuation">,</span>vbpp<span class="token punctuation">,</span>line_len<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> tcolor <span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-int">int</span> R<span class="token punctuation">,</span>G<span class="token punctuation">,</span>B<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> 	R1<span class="token punctuation">,</span> G1<span class="token punctuation">,</span> B1<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-int">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> max<span class="token punctuation">;</span>
+	<span class="token keyword keyword-char">char</span> type<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// JPEGオブジェクトの初期化</span>
+	cinfo<span class="token punctuation">.</span>err <span class="token operator">=</span> <span class="token function">jpeg_std_error</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>jerr <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">jpeg_create_decompress</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ファイルを開く</span>
+	fp <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"rb"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">jpeg_stdio_src</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo<span class="token punctuation">,</span> fp <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ヘッダの読み込み</span>
+	<span class="token function">jpeg_read_header</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo<span class="token punctuation">,</span> TRUE <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 展開の開始</span>
+	<span class="token function">jpeg_start_decompress</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 幅と高さの取得</span>
+	width <span class="token operator">=</span> cinfo<span class="token punctuation">.</span>output_width<span class="token punctuation">;</span>
+	height <span class="token operator">=</span> cinfo<span class="token punctuation">.</span>output_height<span class="token punctuation">;</span>
+
+	<span class="token comment">// イメージを保持するメモリ領域の確保と初期化</span>
+	img <span class="token operator">=</span> <span class="token punctuation">(</span>JSAMPARRAY<span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span> JSAMPROW <span class="token punctuation">)</span> <span class="token operator">*</span> height <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> height<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		img<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>JSAMPROW<span class="token punctuation">)</span><span class="token function">calloc</span><span class="token punctuation">(</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span> JSAMPLE <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token operator">*</span> width <span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 全イメージデータを取得</span>
+	<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span> cinfo<span class="token punctuation">.</span>output_scanline <span class="token operator">&lt;</span> cinfo<span class="token punctuation">.</span>output_height <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">jpeg_read_scanlines</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo<span class="token punctuation">,</span>
+			img <span class="token operator">+</span> cinfo<span class="token punctuation">.</span>output_scanline<span class="token punctuation">,</span>
+			cinfo<span class="token punctuation">.</span>output_height <span class="token operator">-</span> cinfo<span class="token punctuation">.</span>output_scanline
+		<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 展開の終了</span>
+	<span class="token function">jpeg_finish_decompress</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// JPEGオブジェクトの破棄</span>
+	<span class="token function">jpeg_destroy_decompress</span><span class="token punctuation">(</span> <span class="token operator">&amp;</span>cinfo <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ファイルを閉じる</span>
+	<span class="token function">fclose</span><span class="token punctuation">(</span> fp <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+	<span class="token comment">/* 読み書き用にファイルを開く */</span>
+	fd_framebuffer <span class="token operator">=</span> <span class="token function">open</span><span class="token punctuation">(</span> DEVICE_NAME <span class="token punctuation">,</span> O_RDWR<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>fd_framebuffer <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token string">"Framebuffer device open error !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">send_current_information</span><span class="token punctuation">(</span><span class="token string">"The framebuffer device was opened !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* 固定スクリーン情報取得 */</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span> <span class="token function">ioctl</span><span class="token punctuation">(</span> fd_framebuffer <span class="token punctuation">,</span> FBIOGET_FSCREENINFO <span class="token punctuation">,</span> <span class="token operator">&amp;</span>finfo <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token string">"Fixed information not gotton !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">/* 変動スクリーン情報取得 */</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span> <span class="token function">ioctl</span><span class="token punctuation">(</span> fd_framebuffer <span class="token punctuation">,</span> FBIOGET_VSCREENINFO <span class="token punctuation">,</span> <span class="token operator">&amp;</span>vinfo <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token string">"Variable information not gotton !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	xres <span class="token operator">=</span> vinfo<span class="token punctuation">.</span>xres <span class="token punctuation">;</span>
+	yres <span class="token operator">=</span> vinfo<span class="token punctuation">.</span>yres <span class="token punctuation">;</span>
+	vbpp <span class="token operator">=</span> vinfo<span class="token punctuation">.</span>bits_per_pixel <span class="token punctuation">;</span>
+	line_len <span class="token operator">=</span> finfo<span class="token punctuation">.</span>line_length <span class="token punctuation">;</span>
+	<span class="token function">sprintf</span><span class="token punctuation">(</span> tmp <span class="token punctuation">,</span> <span class="token string">"%d(pixel)x%d(line), %dbpp(bits per pixel)"</span><span class="token punctuation">,</span>xres<span class="token punctuation">,</span>yres<span class="token punctuation">,</span>vbpp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">send_current_information</span><span class="token punctuation">(</span> tmp <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* バイト単位でのスクリーンのサイズを計算 */</span>
+	screensize <span class="token operator">=</span> xres <span class="token operator">*</span> yres <span class="token operator">*</span> vbpp <span class="token operator">/</span> DIV_BYTE <span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">"screensize=%d\n"</span><span class="token punctuation">,</span> screensize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/* デバイスをメモリにマップする */</span>
+	fbptr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">mmap</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>screensize<span class="token punctuation">,</span>PROT_READ <span class="token operator">|</span> PROT_WRITE<span class="token punctuation">,</span>MAP_SHARED<span class="token punctuation">,</span>fd_framebuffer<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>fbptr <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token string">"Don't get framebuffer device to memory !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">send_current_information</span><span class="token punctuation">(</span><span class="token string">"The framebuffer device was mapped !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	x1 <span class="token operator">=</span> <span class="token punctuation">(</span>xres <span class="token operator">-</span> width<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+	y1 <span class="token operator">=</span> <span class="token punctuation">(</span>yres <span class="token operator">-</span> height<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">"x1=%d,y1=%d\n"</span><span class="token punctuation">,</span> x1<span class="token punctuation">,</span> y1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> f_line<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&lt;</span>yres<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		p<span class="token operator">=</span>img<span class="token punctuation">[</span>f_line<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> f_width<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span> i<span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;</span>xres <span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>x1 <span class="token operator">||</span> j<span class="token operator">&lt;</span>y1 <span class="token operator">||</span> i<span class="token operator">&gt;=</span>x1<span class="token operator">+</span>width <span class="token operator">||</span> j<span class="token operator">&gt;=</span>y1<span class="token operator">+</span>height<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				tcolor <span class="token operator">=</span> COLOR_BLACK<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+				R <span class="token operator">=</span> <span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">;</span>
+				G <span class="token operator">=</span> <span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">;</span>
+				B <span class="token operator">=</span> <span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">;</span>
+				R1 <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span>R<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>R<span class="token operator">&gt;</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">255</span> <span class="token operator">:</span> R<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				G1 <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span>G<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>G<span class="token operator">&gt;</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">255</span> <span class="token operator">:</span> G<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				B1 <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span>B<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>B<span class="token operator">&gt;</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token number">255</span> <span class="token operator">:</span> B<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				tcolor <span class="token operator">=</span> R1<span class="token operator">&lt;&lt;</span><span class="token number">16</span> <span class="token operator">|</span> G1<span class="token operator">&lt;&lt;</span><span class="token number">8</span> <span class="token operator">|</span> B1<span class="token punctuation">;</span>
+				<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span> <span class="token operator">++</span>f_width <span class="token operator">==</span> width <span class="token punctuation">)</span> f_line<span class="token operator">++</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+			<span class="token comment">/* 格納位置計算 */</span>
+			location <span class="token operator">=</span> <span class="token punctuation">(</span>i<span class="token operator">+</span>vinfo<span class="token punctuation">.</span>xoffset<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>j<span class="token operator">+</span>vinfo<span class="token punctuation">.</span>yoffset<span class="token punctuation">)</span> <span class="token operator">*</span> line_len<span class="token operator">/</span><span class="token number">4</span> <span class="token punctuation">;</span>
+
+			<span class="token comment">/* 着色 */</span>
+			<span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-int">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>fbptr <span class="token operator">+</span> location<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> tcolor<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">munmap</span><span class="token punctuation">(</span>fbptr<span class="token punctuation">,</span>screensize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>fd_framebuffer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> height<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token function">free</span><span class="token punctuation">(</span>img<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">free</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">send_current_error_msg</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token function">fprintf</span><span class="token punctuation">(</span> <span class="token constant">stderr</span> <span class="token punctuation">,</span> <span class="token string">"%s\n"</span> <span class="token punctuation">,</span> ptr <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">send_current_information</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <span class="token operator">*</span>ptr<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token function">fprintf</span><span class="token punctuation">(</span> <span class="token constant">stdout</span> <span class="token punctuation">,</span> <span class="token string">"%s\n"</span> <span class="token punctuation">,</span> ptr <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="-mkdir-08blcdjpeg">$ mkdir 08b.lcdjpeg </h4>
+<details open=""><summary> atmark@atde8:~$ mkdir -p /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:~$ <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg
+atmark@atde8:~$ <span class="token builtin class-name">cd</span> /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg/
+atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">touch</span> fbdisp_jpeg.c
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre></details>
+<h4 id="-arm-linux-gnueabihf-gcc-fbdisp_jpegc--o-fbdisp_jpeg--ljpeg--v">$ arm-linux-gnueabihf-gcc fbdisp_jpeg.c -o fbdisp_jpeg -ljpeg -v </h4>
+<details open=""><summary> atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ arm-linux-gnueabihf-gcc fbdisp_jpeg.c -o fbdisp_jpeg -ljpeg -v </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ arm-linux-gnueabihf-gcc fbdisp_jpeg.c <span class="token parameter variable">-o</span> fbdisp_jpeg <span class="token parameter variable">-ljpeg</span> <span class="token parameter variable">-v</span>
+Using built-in specs.
+<span class="token assign-left variable">COLLECT_GCC</span><span class="token operator">=</span>arm-linux-gnueabihf-gcc
+<span class="token assign-left variable">COLLECT_LTO_WRAPPER</span><span class="token operator">=</span>/usr/lib/gcc-cross/arm-linux-gnueabihf/8/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: <span class="token punctuation">..</span>/src/configure <span class="token parameter variable">-v</span> --with-pkgversion<span class="token operator">=</span><span class="token string">'Debian 8.3.0-2'</span> --with-bugurl<span class="token operator">=</span>file:///usr/share/doc/gcc-8/README.Bugs --enable-languages<span class="token operator">=</span>c,ada,c++,go,d,fortran,objc,obj-c++ <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr --with-gcc-major-version-only --program-suffix<span class="token operator">=</span>-8 --enable-shared --enable-linker-build-id <span class="token parameter variable">--libexecdir</span><span class="token operator">=</span>/usr/lib --without-included-gettext --enable-threads<span class="token operator">=</span>posix <span class="token parameter variable">--libdir</span><span class="token operator">=</span>/usr/lib --enable-nls --with-sysroot<span class="token operator">=</span>/ --enable-clocale<span class="token operator">=</span>gnu --enable-libstdcxx-debug --enable-libstdcxx-time<span class="token operator">=</span>yes --with-default-libstdcxx-abi<span class="token operator">=</span>new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-multiarch --disable-sjlj-exceptions --with-arch<span class="token operator">=</span>armv7-a --with-fpu<span class="token operator">=</span>vfpv3-d16 --with-float<span class="token operator">=</span>hard --with-mode<span class="token operator">=</span>thumb --disable-werror --enable-checking<span class="token operator">=</span>release <span class="token parameter variable">--build</span><span class="token operator">=</span>x86_64-linux-gnu <span class="token parameter variable">--host</span><span class="token operator">=</span>x86_64-linux-gnu <span class="token parameter variable">--target</span><span class="token operator">=</span>arm-linux-gnueabihf --program-prefix<span class="token operator">=</span>arm-linux-gnueabihf- <span class="token parameter variable">--includedir</span><span class="token operator">=</span>/usr/arm-linux-gnueabihf/include
+Thread model: posix
+gcc version <span class="token number">8.3</span>.0 <span class="token punctuation">(</span>Debian <span class="token number">8.3</span>.0-2<span class="token punctuation">)</span>
+<span class="token assign-left variable">COLLECT_GCC_OPTIONS</span><span class="token operator">=</span><span class="token string">'-o'</span> <span class="token string">'fbdisp_jpeg'</span> <span class="token string">'-v'</span>  <span class="token string">'-mfloat-abi=hard'</span> <span class="token string">'-mfpu=vfpv3-d16'</span> <span class="token string">'-mthumb'</span> <span class="token string">'-mtls-dialect=gnu'</span> <span class="token string">'-march=armv7-a+fp'</span>
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/cc1 <span class="token parameter variable">-quiet</span> <span class="token parameter variable">-v</span> <span class="token parameter variable">-imultilib</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-imultiarch</span> arm-linux-gnueabihf fbdisp_jpeg.c <span class="token parameter variable">-quiet</span> <span class="token parameter variable">-dumpbase</span> fbdisp_jpeg.c -mfloat-abi<span class="token operator">=</span>hard <span class="token parameter variable">-mfpu</span><span class="token operator">=</span>vfpv3-d16 <span class="token parameter variable">-mthumb</span> -mtls-dialect<span class="token operator">=</span>gnu <span class="token parameter variable">-march</span><span class="token operator">=</span>armv7-a+fp <span class="token parameter variable">-auxbase</span> fbdisp_jpeg <span class="token parameter variable">-version</span> <span class="token parameter variable">-o</span> /tmp/ccWPC336.s
+GNU C17 <span class="token punctuation">(</span>Debian <span class="token number">8.3</span>.0-2<span class="token punctuation">)</span> version <span class="token number">8.3</span>.0 <span class="token punctuation">(</span>arm-linux-gnueabihf<span class="token punctuation">)</span>
+        compiled by GNU C version <span class="token number">8.3</span>.0, GMP version <span class="token number">6.1</span>.2, MPFR version <span class="token number">4.0</span>.2, MPC version <span class="token number">1.1</span>.0, isl version isl-0.20-GMP
+
+GGC heuristics: <span class="token parameter variable">--param</span> ggc-min-expand<span class="token operator">=</span><span class="token number">100</span> <span class="token parameter variable">--param</span> ggc-min-heapsize<span class="token operator">=</span><span class="token number">131072</span>
+ignoring nonexistent directory <span class="token string">"/usr/local/include/arm-linux-gnueabihf"</span>
+ignoring nonexistent directory <span class="token string">"/usr/include/arm-linux-gnueabihf"</span>
+<span class="token comment">#include "..." search starts here:</span>
+<span class="token comment">#include &lt;...&gt; search starts here:</span>
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/include
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/include-fixed
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/include
+ /usr/include
+End of search list.
+GNU C17 <span class="token punctuation">(</span>Debian <span class="token number">8.3</span>.0-2<span class="token punctuation">)</span> version <span class="token number">8.3</span>.0 <span class="token punctuation">(</span>arm-linux-gnueabihf<span class="token punctuation">)</span>
+        compiled by GNU C version <span class="token number">8.3</span>.0, GMP version <span class="token number">6.1</span>.2, MPFR version <span class="token number">4.0</span>.2, MPC version <span class="token number">1.1</span>.0, isl version isl-0.20-GMP
+
+GGC heuristics: <span class="token parameter variable">--param</span> ggc-min-expand<span class="token operator">=</span><span class="token number">100</span> <span class="token parameter variable">--param</span> ggc-min-heapsize<span class="token operator">=</span><span class="token number">131072</span>
+Compiler executable checksum: b8d08cc7ef486e9bf5053e03b65076e5
+<span class="token assign-left variable">COLLECT_GCC_OPTIONS</span><span class="token operator">=</span><span class="token string">'-o'</span> <span class="token string">'fbdisp_jpeg'</span> <span class="token string">'-v'</span>  <span class="token string">'-mfloat-abi=hard'</span> <span class="token string">'-mfpu=vfpv3-d16'</span> <span class="token string">'-mthumb'</span> <span class="token string">'-mtls-dialect=gnu'</span> <span class="token string">'-march=armv7-a+fp'</span>
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/bin/as <span class="token parameter variable">-v</span> <span class="token parameter variable">-march</span><span class="token operator">=</span>armv7-a -mfloat-abi<span class="token operator">=</span>hard <span class="token parameter variable">-mfpu</span><span class="token operator">=</span>vfpv3-d16 <span class="token parameter variable">-meabi</span><span class="token operator">=</span><span class="token number">5</span> <span class="token parameter variable">-o</span> /tmp/ccLLaoJ4.o /tmp/ccWPC336.s
+GNU アセンブラ バージョン <span class="token number">2.31</span>.1 <span class="token punctuation">(</span>arm-linux-gnueabihf<span class="token punctuation">)</span>、BFD バージョン <span class="token punctuation">(</span>GNU Binutils <span class="token keyword keyword-for">for</span> Debian<span class="token punctuation">)</span> <span class="token number">2.31</span>.1 を使用
+<span class="token assign-left variable">COMPILER_PATH</span><span class="token operator">=</span>/usr/lib/gcc-cross/arm-linux-gnueabihf/8/:/usr/lib/gcc-cross/arm-linux-gnueabihf/8/:/usr/lib/gcc-cross/arm-linux-gnueabihf/:/usr/lib/gcc-cross/arm-linux-gnueabihf/8/:/usr/lib/gcc-cross/arm-linux-gnueabihf/:/usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/bin/
+<span class="token assign-left variable">LIBRARY_PATH</span><span class="token operator">=</span>/usr/lib/gcc-cross/arm-linux-gnueabihf/8/:/usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/lib/:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+<span class="token assign-left variable">COLLECT_GCC_OPTIONS</span><span class="token operator">=</span><span class="token string">'-o'</span> <span class="token string">'fbdisp_jpeg'</span> <span class="token string">'-v'</span>  <span class="token string">'-mfloat-abi=hard'</span> <span class="token string">'-mfpu=vfpv3-d16'</span> <span class="token string">'-mthumb'</span> <span class="token string">'-mtls-dialect=gnu'</span> <span class="token string">'-march=armv7-a+fp'</span>
+ /usr/lib/gcc-cross/arm-linux-gnueabihf/8/collect2 <span class="token parameter variable">-plugin</span> /usr/lib/gcc-cross/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt<span class="token operator">=</span>/usr/lib/gcc-cross/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt<span class="token operator">=</span>-fresolution<span class="token operator">=</span>/tmp/ccl7d9F2.res -plugin-opt<span class="token operator">=</span>-pass-through<span class="token operator">=</span>-lgcc -plugin-opt<span class="token operator">=</span>-pass-through<span class="token operator">=</span>-lgcc_s -plugin-opt<span class="token operator">=</span>-pass-through<span class="token operator">=</span>-lc -plugin-opt<span class="token operator">=</span>-pass-through<span class="token operator">=</span>-lgcc -plugin-opt<span class="token operator">=</span>-pass-through<span class="token operator">=</span>-lgcc_s <span class="token parameter variable">--sysroot</span><span class="token operator">=</span>/ --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 <span class="token parameter variable">-X</span> --hash-style<span class="token operator">=</span>gnu <span class="token parameter variable">-m</span> armelf_linux_eabi <span class="token parameter variable">-pie</span> <span class="token parameter variable">-o</span> fbdisp_jpeg /usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/lib/Scrt1.o /usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/lib/crti.o /usr/lib/gcc-cross/arm-linux-gnueabihf/8/crtbeginS.o -L/usr/lib/gcc-cross/arm-linux-gnueabihf/8 -L/usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/lib -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf /tmp/ccLLaoJ4.o <span class="token parameter variable">-ljpeg</span> <span class="token parameter variable">-lgcc</span> --push-state --as-needed <span class="token parameter variable">-lgcc_s</span> --pop-state <span class="token parameter variable">-lc</span> <span class="token parameter variable">-lgcc</span> --push-state --as-needed <span class="token parameter variable">-lgcc_s</span> --pop-state /usr/lib/gcc-cross/arm-linux-gnueabihf/8/crtendS.o /usr/lib/gcc-cross/arm-linux-gnueabihf/8/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/arm-linux-gnueabihf/lib/crtn.o
+<span class="token assign-left variable">COLLECT_GCC_OPTIONS</span><span class="token operator">=</span><span class="token string">'-o'</span> <span class="token string">'fbdisp_jpeg'</span> <span class="token string">'-v'</span>  <span class="token string">'-mfloat-abi=hard'</span> <span class="token string">'-mfpu=vfpv3-d16'</span> <span class="token string">'-mthumb'</span> <span class="token string">'-mtls-dialect=gnu'</span> <span class="token string">'-march=armv7-a+fp'</span>
+
+atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">ls</span> <span class="token parameter variable">-al</span>
+合計 <span class="token number">28</span>
+drwxrwx--- <span class="token number">1</span> root vboxsf     <span class="token number">0</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:44 <span class="token builtin class-name">.</span>
+drwxrwx--- <span class="token number">1</span> root vboxsf  <span class="token number">4096</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:40 <span class="token punctuation">..</span>
+-rwxrwx--- <span class="token number">1</span> root vboxsf <span class="token number">13356</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:44 fbdisp_jpeg
+-rwxrwx--- <span class="token number">1</span> root vboxsf  <span class="token number">4423</span>  <span class="token number">7</span>月 <span class="token number">18</span> <span class="token number">19</span>:43 fbdisp_jpeg.c
+atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile-の作成">Makefile の作成 </h4>
+<details open=""><summary> $ cp ../08a.lcd/Makefile . </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">cp</span> <span class="token punctuation">..</span>/08a.lcd/Makefile <span class="token builtin class-name">.</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre></details>
+<h5 id="08blcdjpegmakefile">08b.lcdjpeg/Makefile </h5>
+<details open=""><summary> 08b.lcdjpeg/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>CC <span class="token operator">=</span> arm-linux-gnueabihf-gcc
+TARGET <span class="token operator">=</span> fbdisp_jpeg
+CFLAGS <span class="token operator">=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+LIBS <span class="token operator">=</span> <span class="token parameter variable">-ljpeg</span>
+
+all: <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+fbdisp_jpeg: fbdisp_jpeg.c
+	<span class="token variable"><span class="token variable">$(</span>CC<span class="token variable">)</span></span> <span class="token parameter variable">-o</span> <span class="token variable">$@</span> $^ <span class="token variable"><span class="token variable">$(</span>CFLAGS<span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span>LDFLAGS<span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span>LIBS<span class="token variable">)</span></span>
+
+<span class="token function">install</span> <span class="token builtin class-name">:</span>
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>    /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>    /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> image/*.jpg  /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> image/*.jpg  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+.PHONY: clean
+
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h5 id="適当なjpegファイルを用意">適当なjpegファイルを用意 </h5>
+<details open=""><summary> 800x600 SVGA *.jpg</summary>
+<p><img src="assets/cosmos2-svga.jpg" alt="alt text"><br>
+<img src="assets/higan2-svga.jpg" alt="alt text"><br>
+<img src="assets/himawari1-svga.jpg" alt="alt text"><br>
+<img src="assets/karashina2-svga.jpg" alt="alt text"><br>
+<img src="assets/momo2-svga.jpg" alt="alt text"><br>
+<img src="assets/sakura2-svga.jpg" alt="alt text"><br>
+<img src="assets/ume2-svga.jpg" alt="alt text"></p>
+</details>
+<h5 id="make-clean">make clean </h5>
+<details open=""><summary> $ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">make</span> clean
+<span class="token function">rm</span> <span class="token parameter variable">-f</span> fbdisp_jpeg
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h5 id="make">make </h5>
+<details open=""><summary> $ make </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">make</span>
+arm-linux-gnueabihf-gcc <span class="token parameter variable">-o</span> fbdisp_jpeg fbdisp_jpeg.c -gdwarf-2 <span class="token parameter variable">-O0</span>  <span class="token parameter variable">-ljpeg</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h5 id="sudo-make-install">sudo make install </h5>
+<details open=""><summary> $ sudo make install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/08b.lcdjpeg$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> fbdisp_jpeg    /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> fbdisp_jpeg    /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> fbdisp_jpeg.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> image/*.jpg /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> image/*.jpg /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="csideでロード">CSIDEでロード </h4>
+<details open=""><summary> メニュー「ファイル」-「ロード」</summary>
+<p><img src="assets/2024-07-18_20-46-35.png" alt="alt text"></p>
+</details>
+<h4 id="実行結果">実行結果 </h4>
+<details open=""><summary> root@armadillo:/debug/04_practice# ./fbdisp_jpeg ume2-svga.jpg </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># ./fbdisp_jpeg ume2-svga.jpg</span>
+The framebuffer device was opened <span class="token operator">!</span>
+<span class="token number">800</span><span class="token punctuation">(</span>pixel<span class="token punctuation">)</span>x480<span class="token punctuation">(</span>line<span class="token punctuation">)</span>, 32bpp<span class="token punctuation">(</span>bits per pixel<span class="token punctuation">)</span>
+<span class="token assign-left variable">screensize</span><span class="token operator">=</span><span class="token number">1536000</span>
+The framebuffer device was mapped <span class="token operator">!</span>
+<span class="token assign-left variable">x1</span><span class="token operator">=</span><span class="token number">0</span>,y1<span class="token operator">=</span>-60
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行している様子">実行している様子 </h4>
+<details open=""><summary> fbdisp_jpeg を実行している動画 </summary>
+<p><a href="https://youtu.be/up1xuboWB9M">https://youtu.be/up1xuboWB9M</a></p>
+<p><video controls="" src="assets/20240718_fbdisp_jpeg.mp4" title="Title" width="1024"></video></p>
+</details>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
