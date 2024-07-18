@@ -1,0 +1,47 @@
+I:\OneNoteMarkDownWork\MarkDownWork\R06_2023\kyozai\0102_EmbeddedSystemArchitecture\Linux\20240701_ArmadilloX1BusterNSKhwpwm_appdbg\teacher
+
+35本の動画
+
+YouYube
+02.led
+20240703_02led_devicefile.mp4   https://youtu.be/K0L9yKmVo8k
+20240703_02led_ledctl.mp4   https://youtu.be/zoULMecAvbw
+20240704_02led_ldmeter.mp4  https://youtu.be/vxxYnZIT9bM
+
+20240704_03button_btevent.mp4   https://youtu.be/XWLqbuTBHVQ
+20240704_03button_btled.mp4 https://youtu.be/VSQp8s2DCQM
+0240704_03button_btlaunch.mp4   https://youtu.be/NWjMb6h09No
+
+20240705_04sensor_asevent.mp4   https://youtu.be/1O3wMkOxOCI
+20240705_04sensor_asled.mp4 https://youtu.be/91Cou1sUmjA
+
+20240709_motor_hwpwm.mp4    https://youtu.be/nsv_obnWsRA
+20240709_mtctl.mp4  https://youtu.be/Z1M_sQEWNLY
+20240709_mtfan.mp4  https://youtu.be/yuZ88HaSEAw
+20240709_mtfan2.mp4 https://youtu.be/8gDiPCHvqsw
+
+20240709_d7ctl.mp4  https://youtu.be/aR0KXLVeaVU
+20240709_d7fan.mp4  https://youtu.be/7wtLI7YoFok
+
+20240709_clcd_devicefile.mp4 https://youtu.be/iw0JfRs6LUE
+20240709_clctl.mp4  https://youtu.be/zg64i9R1as8
+20240709_clclock.mp4    https://youtu.be/ztpdkQt-bHo
+
+20240709_framebuffer_primcol.rgb.mp4 https://youtu.be/cgvoJdAWhgY
+20240709_lcdclear.mp4   https://youtu.be/uC1v1coHhP8
+20240709_colorbar.mp4   https://youtu.be/bwBskFgUOkg
+20240709_dispbmp.mp4    https://youtu.be/EPYFJ4yTZWY
+
+20240711_tpevent.mp4    https://youtu.be/UsarzH6bivM
+20240711_tslib_caribration.mp4  https://youtu.be/k75Hq7tPMxE
+20240711_tslibのインストール.mp4    https://youtu.be/Qyp1aZJCSQ8
+20240711_tpevent2.mp4   https://youtu.be/FLKHKoy0Zwc
+20240711_tpstamp.mp4    https://youtu.be/Wg5nwXQLsmw
+
+20240712_guipanel.mp4   https://youtu.be/b1VvFvKPQT0
+
+20240712_dcsrv&dccli.mp4    https://youtu.be/IB73dB81qkc
+20240712_netpanel.mp4   https://youtu.be/ACyrRbNtBnA
+
+20240715_Nginx_chrome_devctl.mp4    https://youtu.be/JNXQb-oGVOM
+20240715_Nginx_curl_devctl.mp4  https://youtu.be/DFiZbdZ-sTE
