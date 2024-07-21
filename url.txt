@@ -1,8 +1,10 @@
-I:\OneNoteMarkDownWork\MarkDownWork\R06_2023\kyozai\0102_EmbeddedSystemArchitecture\Linux\20240701_ArmadilloX1BusterNSKhwpwm_appdbg\teacher
+https://github.com/cpceigit2024/EmbeddedLinux
 
-35本の動画
+2024/7/21 
 
-YouYube
+20240702_hello.mp4	https://youtu.be/YVPniqPF-bY
+20240630_sigtest.mp4	https://youtu.be/VTt82rHYxgQ
+
 20240703_02led_devicefile.mp4   https://youtu.be/K0L9yKmVo8k
 20240703_02led_ledctl.mp4   https://youtu.be/zoULMecAvbw
 20240704_02led_ldmeter.mp4  https://youtu.be/vxxYnZIT9bM
@@ -46,5 +48,3 @@ YouYube
 20240715_Nginx_curl_devctl.mp4  https://youtu.be/DFiZbdZ-sTE
 
 20240718_fbdisp_jpeg.mp4	https://youtu.be/up1xuboWB9M
-
-https://github.com/cpceigit2024/EmbeddedLinux
