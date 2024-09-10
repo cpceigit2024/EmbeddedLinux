@@ -1,0 +1,1321 @@
+<!DOCTYPE html><html><head>
+      <title>20240718_04sensor</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\sfujimoto\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.14\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}@font-face{font-family:"Material Icons";font-style:normal;font-weight:400;src:local("Material Icons"),local("MaterialIcons-Regular"),url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAfIAAsAAAAADDAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kosY21hcAAAAYAAAADTAAACjtP6ytBnbHlmAAACVAAAAxgAAAQ4zRtvlGhlYWQAAAVsAAAALwAAADYRwZsnaGhlYQAABZwAAAAcAAAAJAeKAzxobXR4AAAFuAAAABIAAAA8OGQAAGxvY2EAAAXMAAAAIAAAACAG5AfwbWF4cAAABewAAAAfAAAAIAEfAERuYW1lAAAGDAAAAVcAAAKFkAhoC3Bvc3QAAAdkAAAAYgAAAK2vz7wkeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkPsQ4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVLy4xKzzX4chhrmK4QpQmBEkBwAZygyweJzFkr0NwjAQhZ+TEP6CRUfHBEwRUWaQTICyQbpMwRCskA5RUIONxG0RnnNpKAIV4qzPku/8c353ACYAYrIjCWCuMAh2ptf0/hiL3p/gyPUWa3osqlt0L1zu9r71z8dGrJRykFoauXQd932Lj5vhG+MjxGeYI8MKETObMpslf5EyP8tg+vHun5r539PvlvXzaVhRFVQDTPEWKVQR90KhnnC5Ek67vUKN4VuFasM/ldARj43CCkCsEjpJSoVVgRyU0GVSK6wUpFFCx8lFgX0BiXpRPQB4nE2TTWjcRhTH3xttpDhxN7uxPlp3u/FK7moRPixafRijNosxSw/LUsIwNcaEHPZggo/FmEKMCKWU4kNOOftQSlhE8alnH0Ix9BqWnHooPRrTQ0+mnu2bXTu2pPdGM9LM/6c3fwECTM4gBBMYQNqxzLrZAjqYSlqu2TAHZQA0/DQJH6FtzqGDnvbt4Ggwvzw/nL8EfH8kW0fsuRqhgWXZnY7M1picaUL7Du5BHeDzMIl83dAt016wH1qmvtSMo5R6YRJHTR//FXsff/nj/tc/5K9P5d+nP22+fFK5u7v3K39SW3y+OtDKO3L85vD09PD9z5X17a2N1g4tqk01RlqX7gyoEmnsWQtVr4rtZMmukEaFBZxzefkCn11cyKMLZgshRwgTYNoLNXCBz2ja7HvZG7hDpPSNfoo5vs0knK/9hb+rNpu+8kHPgk/Ao4kK3tWtTpSEtvkA9c+wE6UaUdwieNkaHg55tBEtRiEPw1s0+FtrtTcc9two2lhMknV7PZF/cs6+uUFTmpTGbEx7sQCPSLOttHS3GRltqp7SNzVSKzl6aWnZT/CX5k6/v9N3Hh8fHBwffJVjhrC6OgH5dkIt/tPsq+d/PD5Qz7G7efzq1THFjdZVPe/N6ulQ3JnDWSE5junsFsVIiFwL/htf1S5gJ3BfOcUxfHKLnzqpFpyfZ9cX+/5WB6a+Y0pHpzkNrYNVDwMsikK+y7WuLCRg/oFHkA8VT3rDg5ZnU6ktzzINymV0m74Xd5pfIGXyFeVEQSShkzqG7TBBa2OxVRKitLXv7h3uuftXnXq7lz2tZ/WnWa9dx9dCjDhHzmuVQATlmljr9dZErUydSo2Hbi/b1vXtrOeGCk2/8s3ZlO8+ueJT8BVlw5pGw2oYccdSiHHqx0RlabHqdNR9jAETl6PreJcPBnnfpTLnOQ8C3OV8AmQGzouV1iZdeb5SSIoVc8W8/kcDtksUH5FrU6/aqBqNWcMEzxG4DAQ14qRQhi9mWU0rzepKezbjfgCwQKxVYq5ajRgpRqy45CqwkJydcEkbTkvRz8P5/2ZpDTN4nGNgZGBgAOKb6v+/xvPbfGXgZmEAgeuB2kkI+v8bFgbmKiCXg4EJJAoAPyAKhQB4nGNgZGBg1vmvwxDDwgACQJKRARXwAwAzZQHQeJxjYQCCFAYGFgbSMQAcWACdAAAAAAAAAAwALgBgAIQAmADSAQgBIgE8AVABoAHeAfwCHHicY2BkYGDgZ7BgYGMAASYg5gJCBob/YD4DAA/hAWQAeJxlkbtuwkAURMc88gApQomUJoq0TdIQzEOpUDokKCNR0BuzBiO/tF6QSJcPyHflE9Klyyekz2CuG8cr7547M3d9JQO4xjccnJ57vid2cMHqxDWc40G4Tv1JuEF+Fm6ijRfhM+oz4Ra6eBVu4wZvvMFpXLIa40PYQQefwjVc4Uu4Tv1HuEH+FW7i1mkKn6Hj3Am3sHC6wm08Ou8tpSZGe1av1PKggjSxPd8zJtSGTuinyVGa6/Uu8kxZludCmzxMEzV0B6U004k25W35fj2yNlCBSWM1paujKFWZSbfat+7G2mzc7weiu34aczzFNYGBhgfLfcV6iQP3ACkSaj349AxXSN9IT0j16JepOb01doiKbNWt1ovippz6sVYYwsXgX2rGVFIkq7Pl2PNrI6qW6eOshj0xaSq9mpNEZIWs8LZUfOouNkVXxp/d5woqebeYIf4D2J1ywQB4nG3LOw6AIBAE0B384B+PAkgEa+QwNnYmHt+EpXSal5lkSBBnoP8oCFSo0aCFRIceA0ZMmLFAYSW88rmvtMUjG3RiQ9HvpfusM6zWNmtc5H/iPewha50tOt5PS/QBx2IeSwAA") format("woff")}.admonition{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);position:relative;margin:1.5625em 0;padding:0 1.2rem;border-left:.4rem solid rgba(68,138,255,.8);border-radius:.2rem;background-color:rgba(255,255,255,.05);overflow:auto}.admonition>p{margin-top:.8rem}.admonition>.admonition-title{margin:0 -1.2rem;padding:.8rem 1.2rem .8rem 3.6rem;border-bottom:1px solid rgba(68,138,255,.2);background-color:rgba(68,138,255,.1);font-weight:700}.admonition>.admonition-title:before{position:absolute;left:1.2rem;font-size:1.5rem;color:rgba(68,138,255,.8);content:"\E3C9"}.admonition>.admonition-title:before{font-family:Material Icons;font-style:normal;font-variant:normal;font-weight:400;line-height:2rem;text-transform:none;white-space:nowrap;speak:none;word-wrap:normal;direction:ltr}.admonition.abstract,.admonition.summary,.admonition.tldr{border-left-color:rgba(0,176,255,.8)}.admonition.abstract>.admonition-title,.admonition.summary>.admonition-title,.admonition.tldr>.admonition-title{background-color:rgba(0,176,255,.1);border-bottom-color:rgba(0,176,255,.2)}.admonition.abstract>.admonition-title:before,.admonition.summary>.admonition-title:before,.admonition.tldr>.admonition-title:before{color:#00b0ff;content:"\E8D2"}.admonition.hint,.admonition.tip{border-left-color:rgba(0,191,165,.8)}.admonition.hint>.admonition-title,.admonition.tip>.admonition-title{background-color:rgba(0,191,165,.1);border-bottom-color:rgba(0,191,165,.2)}.admonition.hint>.admonition-title:before,.admonition.tip>.admonition-title:before{color:#00bfa5;content:"\E80E"}.admonition.info,.admonition.todo{border-left-color:rgba(0,184,212,.8)}.admonition.info>.admonition-title,.admonition.todo>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.info>.admonition-title:before,.admonition.todo>.admonition-title:before{color:#00b8d4;content:"\E88E"}.admonition.check,.admonition.done,.admonition.success{border-left-color:rgba(0,200,83,.8)}.admonition.check>.admonition-title,.admonition.done>.admonition-title,.admonition.success>.admonition-title{background-color:rgba(0,200,83,.1);border-bottom-color:rgba(0,200,83,.2)}.admonition.check>.admonition-title:before,.admonition.done>.admonition-title:before,.admonition.success>.admonition-title:before{color:#00c853;content:"\E876"}.admonition.faq,.admonition.help,.admonition.question{border-left-color:rgba(100,221,23,.8)}.admonition.faq>.admonition-title,.admonition.help>.admonition-title,.admonition.question>.admonition-title{background-color:rgba(100,221,23,.1);border-bottom-color:rgba(100,221,23,.2)}.admonition.faq>.admonition-title:before,.admonition.help>.admonition-title:before,.admonition.question>.admonition-title:before{color:#64dd17;content:"\E887"}.admonition.attention,.admonition.caution,.admonition.warning{border-left-color:rgba(255,145,0,.8)}.admonition.attention>.admonition-title,.admonition.caution>.admonition-title,.admonition.warning>.admonition-title{background-color:rgba(255,145,0,.1);border-bottom-color:rgba(255,145,0,.2)}.admonition.attention>.admonition-title:before{color:#ff9100;content:"\E417"}.admonition.caution>.admonition-title:before,.admonition.warning>.admonition-title:before{color:#ff9100;content:"\E002"}.admonition.fail,.admonition.failure,.admonition.missing{border-left-color:rgba(255,82,82,.8)}.admonition.fail>.admonition-title,.admonition.failure>.admonition-title,.admonition.missing>.admonition-title{background-color:rgba(255,82,82,.1);border-bottom-color:rgba(255,82,82,.2)}.admonition.fail>.admonition-title:before,.admonition.failure>.admonition-title:before,.admonition.missing>.admonition-title:before{color:#ff5252;content:"\E14C"}.admonition.bug,.admonition.danger,.admonition.error{border-left-color:rgba(255,23,68,.8)}.admonition.bug>.admonition-title,.admonition.danger>.admonition-title,.admonition.error>.admonition-title{background-color:rgba(255,23,68,.1);border-bottom-color:rgba(255,23,68,.2)}.admonition.danger>.admonition-title:before{color:#ff1744;content:"\E3E7"}.admonition.error>.admonition-title:before{color:#ff1744;content:"\E14C"}.admonition.bug>.admonition-title:before{color:#ff1744;content:"\E868"}.admonition.example,.admonition.snippet{border-left-color:rgba(0,184,212,.8)}.admonition.example>.admonition-title,.admonition.snippet>.admonition-title{background-color:rgba(0,184,212,.1);border-bottom-color:rgba(0,184,212,.2)}.admonition.example>.admonition-title:before,.admonition.snippet>.admonition-title:before{color:#00b8d4;content:"\E242"}.admonition.cite,.admonition.quote{border-left-color:rgba(158,158,158,.8)}.admonition.cite>.admonition-title,.admonition.quote>.admonition-title{background-color:rgba(158,158,158,.1);border-bottom-color:rgba(158,158,158,.2)}.admonition.cite>.admonition-title:before,.admonition.quote>.admonition-title:before{color:#9e9e9e;content:"\E244"}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+body {
+  counter-reset: chapter;
+}
+h1 {
+  counter-reset: sub-chapter;
+}
+h2 {
+  counter-reset: section;
+}
+h3 {
+  counter-reset: sub-section;
+}
+h4 {
+  counter-reset: sub-sub-section;
+}
+div.TOC ul {
+  counter-reset: section;
+}
+.markdown-preview.markdown-preview h1 {
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+}
+.markdown-preview.markdown-preview h2 {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+.markdown-preview.markdown-preview h3 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+.markdown-preview.markdown-preview h4 {
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+}
+.markdown-preview.markdown-preview h4:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #5472cd;
+  bottom: -3px;
+  width: 20%;
+}
+.markdown-preview.markdown-preview h5 {
+  border-bottom: solid 3px black;
+}
+.markdown-preview.markdown-preview h1::before {
+  counter-increment: chapter;
+  content: counter(chapter) ". ";
+}
+.markdown-preview.markdown-preview h2::before {
+  counter-increment: sub-chapter;
+  content: counter(chapter) "." counter(sub-chapter) ". ";
+}
+.markdown-preview.markdown-preview h3::before {
+  counter-increment: section;
+  content: counter(chapter) "." counter(sub-chapter) "." counter(section) ". ";
+}
+.markdown-preview.markdown-preview div.TOC li {
+  list-style: none;
+}
+.markdown-preview.markdown-preview div.TOC ul > li:before {
+  counter-increment: section;
+  content: counters(section, '.') '. ';
+}
+.cover-title {
+  text-align: center;
+  font-size: 4em;
+}
+.subtitle {
+  margin-top: 3em;
+  font-size: 3em;
+  text-align: center;
+}
+.cover-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 30%;
+  margin-left: 20px;
+  margin-right: 20px;
+  page-break-after: always;
+  text-align: center;
+  align-items: center;
+  font-size: 2em;
+}
+.cover-innner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.title-wrapper {
+  width: 100%;
+  font-size: 42px;
+  font-weight: 700;
+}
+.create-at-wrapper {
+  font-size: 24px;
+}
+.company-name-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 24px;
+}
+.company-name-wrapper .company-logo-img {
+  max-width: 300px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="04sensor">04.sensor </h1>
+<p><a href="">2024/7/18 Table of Contents</a></p>
+<div class="TOC">
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ol>
+<li><a href="#04sensor">04.sensor</a>
+<ol>
+<li><a href="#%E7%9B%AE%E7%9A%84">目的</a></li>
+<li><a href="#%E6%A7%8B%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF">構成データ</a></li>
+<li><a href="#%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E5%88%B6%E5%BE%A1">センサー制御</a></li>
+<li><a href="#%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90">デバイスドライバ</a></li>
+<li><a href="#%E4%BE%8B%E9%A1%8C-asevent">例題 asevent</a></li>
+<li><a href="#%E8%AA%B2%E9%A1%8C1-asled">課題1 asled</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<div style="page-break-before:always"></div>  <!-- PDFで改ページ-->
+<h2 id="目的">目的 </h2>
+<p>組込みアプリケーション開発 04.sensor</p>
+<h2 id="構成データ">構成データ </h2>
+<h3 id="mediasf_armadillox1hwpwmworkr06_2024apllication_debugtextpractice-ディレクトリ">/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Apllication_debug/text/practice ディレクトリ </h3>
+<details open=""><summary> ･･･/share/ArmadilloX1/hwpwm/<span style="color: red">work</span>/R06_2024/Application<span style="color: red">_debug</span>/<span style="color: red">text</span>/practice/ の構成</summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>user@1204PC-Z490M:/mnt/v/VirtualBoxWork/share/ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice$ tree <span class="token parameter variable">-aF</span> <span class="token parameter variable">-L</span> <span class="token number">3</span>
+./
+├── 04.sensor/
+│   ├── asevent.c*              <span class="token operator">&lt;</span>───── 例題 デバイス制御用ソース
+│   ├── asled.c*                <span class="token operator">&lt;</span>───── 課題1 デバイス制御用ソース
+│   ├── drivers/
+│   │   ├── acceleration/
+│   │   │   ├── acceleration.c* <span class="token operator">&lt;</span>───── ドライバソース
+│   │   │   └── Makefile*       <span class="token operator">&lt;</span>───── ドライバ用Makefile
+│   │   └── leds/
+│   └── Makefile*               <span class="token operator">&lt;</span>───── デバイス制御用Makefile
+
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h2 id="センサー制御">センサー制御 </h2>
+<h3 id="デバイス仕様">デバイス仕様 </h3>
+  <img src="./assets/acceleration.JPG" width="250">
+<h2 id="デバイスドライバ">デバイスドライバ </h2>
+<h3 id="ソース">ソース </h3>
+<h4 id="accelerationc">acceleration.c </h4>
+<details open=""><summary> 04.sensor/drivers/acceleration.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/init.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/i2c.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/platform_device.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/interrupt.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/input.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/jiffies.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/sysfs.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/workqueue.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/module.h&gt;</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">I2C_DEVICE_ADDRESS</span>	<span class="token expression"><span class="token number">0x4c</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MILLI_G_FACTOR</span>		<span class="token expression"><span class="token number">47</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">VALUE_ALERT_BIT</span>		<span class="token expression"><span class="token number">0x40</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">VALUE_SING_BIT</span>		<span class="token expression"><span class="token number">0x20</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">VALUE_COMPLEMENTARY</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token operator">~</span><span class="token number">0x1f</span><span class="token punctuation">)</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">INTSET_GINT</span>		<span class="token expression"><span class="token number">0x10</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MODE_ACTIVE</span>		<span class="token expression"><span class="token number">0x01</span></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">IS_ALERT</span><span class="token expression"><span class="token punctuation">(</span>value<span class="token punctuation">)</span>		<span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&amp;</span> VALUE_ALERT_BIT<span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">IS_MINUS_VALUE</span><span class="token expression"><span class="token punctuation">(</span>value<span class="token punctuation">)</span>	<span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&amp;</span> VALUE_SING_BIT<span class="token punctuation">)</span></span></span>
+
+<span class="token keyword keyword-enum">enum</span> <span class="token class-name">AccelerationRegister</span> <span class="token punctuation">{</span>
+	REG_X_VALUE<span class="token punctuation">,</span>
+	REG_Y_VALUE<span class="token punctuation">,</span>
+	REG_Z_VALUE<span class="token punctuation">,</span>
+	REG_TILT_STATUS<span class="token punctuation">,</span>
+	REG_SAMPLE_RATE_STATUS<span class="token punctuation">,</span>
+	REG_SLEEP_COUNT<span class="token punctuation">,</span>
+	REG_INTERRUPT_SETTING<span class="token punctuation">,</span>
+	REG_MODE_SETTING<span class="token punctuation">,</span>
+	REG_SAMPLE_RATE<span class="token punctuation">,</span>
+	REG_TAP_DETECTION_THRESHOLD<span class="token punctuation">,</span>
+	REG_TAP_DEBOUNCE_COUNT<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_client</span> <span class="token operator">*</span>acceleration_i2c_client<span class="token punctuation">;</span>
+
+<span class="token comment">// I2C通信 データ受信関数(acceleration_i2c_recv_data)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_i2c_recv_data</span><span class="token punctuation">(</span><span class="token keyword keyword-enum">enum</span> <span class="token class-name">AccelerationRegister</span> reg_number<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>recv_buffer<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 加速度センサから1バイトデータを受信するための</span>
+	<span class="token comment">// I2Cメッセージ構造体配列を宣言します。</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_msg</span> msg<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">{</span>
+			<span class="token punctuation">.</span>addr	<span class="token operator">=</span> I2C_DEVICE_ADDRESS<span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>flags	<span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>len	<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>buf	<span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>reg_number<span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">{</span>
+			<span class="token punctuation">.</span>addr	<span class="token operator">=</span> I2C_DEVICE_ADDRESS<span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>flags	<span class="token operator">=</span> I2C_M_RD<span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>len	<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>buf	<span class="token operator">=</span> recv_buffer<span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// I2Cメッセージを転送します。(i2c_transfer)</span>
+	<span class="token keyword keyword-return">return</span> <span class="token function">i2c_transfer</span><span class="token punctuation">(</span>acceleration_i2c_client<span class="token operator">-&gt;</span>adapter<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// I2C通信 データ送信関数(acceleration_i2c_send_data)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_i2c_send_data</span><span class="token punctuation">(</span><span class="token keyword keyword-enum">enum</span> <span class="token class-name">AccelerationRegister</span> reg_number<span class="token punctuation">,</span> <span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> send_data<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 加速度センサへ送信するデータを用意します。</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> send_buffer<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		reg_number<span class="token punctuation">,</span>
+		send_data<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token comment">// 加速度センサへ1バイトデータを送信するための</span>
+	<span class="token comment">// I2Cメッセージ構造体配列を宣言します。</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_msg</span> msg<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">{</span>
+			<span class="token punctuation">.</span>addr <span class="token operator">=</span> I2C_DEVICE_ADDRESS<span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>flags <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>len <span class="token operator">=</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>send_buffer<span class="token punctuation">)</span><span class="token punctuation">,</span>
+			<span class="token punctuation">.</span>buf <span class="token operator">=</span> send_buffer<span class="token punctuation">,</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// I2Cメッセージを転送します。(i2c_transfer)</span>
+	<span class="token keyword keyword-return">return</span> <span class="token function">i2c_transfer</span><span class="token punctuation">(</span>acceleration_i2c_client<span class="token operator">-&gt;</span>adapter<span class="token punctuation">,</span> msg<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-static">static</span> bool is_acceleration_enable <span class="token operator">=</span> false<span class="token punctuation">;</span>
+
+<span class="token comment">// 加速度センサ有効化関数(acceleration_enable_setting)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_enable_setting</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 既に有効になっている場合、何もせず以降の処理を終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>true <span class="token operator">==</span> is_acceleration_enable<span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ワークキューの処理が完了するまで待機します。(flush_scheduled_work)</span>
+	<span class="token function">flush_scheduled_work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	is_acceleration_enable <span class="token operator">=</span> true<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサから割込みが発生するように設定します。(acceleration_i2c_send_data)</span>
+	ret <span class="token operator">=</span> <span class="token function">acceleration_i2c_send_data</span><span class="token punctuation">(</span>REG_INTERRUPT_SETTING<span class="token punctuation">,</span> INTSET_GINT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサをアクティブモードに設定します。(acceleration_i2c_send_data)</span>
+	ret <span class="token operator">=</span> <span class="token function">acceleration_i2c_send_data</span><span class="token punctuation">(</span>REG_MODE_SETTING<span class="token punctuation">,</span> MODE_ACTIVE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサの割込みを有効にします。(enable_irq)</span>
+	<span class="token comment">// -&gt;割込み番号は、acceleration_i2c_client-&gt;irqを指定します。</span>
+	<span class="token function">enable_irq</span><span class="token punctuation">(</span>acceleration_i2c_client<span class="token operator">-&gt;</span>irq<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 加速度センサ無効化関数(acceleration_disable_setting)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_disable_setting</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 既に無効になっている場合、何もせず以降の処理を終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>false <span class="token operator">==</span> is_acceleration_enable<span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	is_acceleration_enable <span class="token operator">=</span> false<span class="token punctuation">;</span>
+
+	<span class="token comment">// ワークキューの処理が完了するまで待機します。(flush_scheduled_work)</span>
+	<span class="token function">flush_scheduled_work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサをスタンバイモードに設定します。(acceleration_i2c_send_data)</span>
+	ret <span class="token operator">=</span> <span class="token function">acceleration_i2c_send_data</span><span class="token punctuation">(</span>REG_MODE_SETTING<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサから割込みが発生しないように設定します。(acceleration_i2c_send_data)</span>
+	ret <span class="token operator">=</span> <span class="token function">acceleration_i2c_send_data</span><span class="token punctuation">(</span>REG_INTERRUPT_SETTING<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 加速度センサ有効/無効設定関数(acceleration_store_enable)</span>
+<span class="token keyword keyword-static">static</span> <span class="token class-name">ssize_t</span> <span class="token function">acceleration_store_enable</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">device</span> <span class="token operator">*</span>dev<span class="token punctuation">,</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">device_attribute</span> <span class="token operator">*</span>attr<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>buf<span class="token punctuation">,</span> <span class="token class-name">size_t</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-long">long</span> enable<span class="token punctuation">;</span>
+
+	<span class="token comment">// 文字列の有効/無効の値を数値に変換します。(kstrtol)</span>
+	ret <span class="token operator">=</span> <span class="token function">kstrtol</span><span class="token punctuation">(</span>buf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサの有効/無効を設定します。</span>
+	<span class="token comment">// -&gt;"0"以外の数字が書き込まれた場合、有効にします。(acceleration_enable_setting)</span>
+	<span class="token comment">//   "0"が書き込まれた場合、無効にします。(acceleration_disable_setting)</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>enable<span class="token punctuation">)</span>
+		ret <span class="token operator">=</span> <span class="token function">acceleration_enable_setting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-else">else</span>
+		ret <span class="token operator">=</span> <span class="token function">acceleration_disable_setting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-long">long</span> event_interval_ms <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 通知間隔設定関数(acceleration_store_delay)</span>
+<span class="token keyword keyword-static">static</span> <span class="token class-name">ssize_t</span> <span class="token function">acceleration_store_delay</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">device</span> <span class="token operator">*</span>dev<span class="token punctuation">,</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">device_attribute</span> <span class="token operator">*</span>attr<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>buf<span class="token punctuation">,</span> <span class="token class-name">size_t</span> count<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+	<span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-long">long</span> interval_ms<span class="token punctuation">;</span>
+
+	<span class="token comment">// 文字列の通知間隔を数値に変換します。(kstrtol)</span>
+	ret <span class="token operator">=</span> <span class="token function">kstrtol</span><span class="token punctuation">(</span>buf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>interval_ms<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// 通知間隔をグローバル変数(event_interval_ms)に格納します。</span>
+	event_interval_ms <span class="token operator">=</span> interval_ms<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 加速度値読み取り関数(read_acceleration_value)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">read_acceleration_value</span><span class="token punctuation">(</span><span class="token keyword keyword-enum">enum</span> <span class="token class-name">AccelerationRegister</span> reg_number<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> buf <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 第1引数で指定されたレジスタからデータを受信します。(acceleration_i2c_recv_data)</span>
+		<span class="token function">acceleration_i2c_recv_data</span><span class="token punctuation">(</span>reg_number<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword keyword-unsigned">unsigned</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// アラートがある場合は再度データを取得します。(IS_ALERT)</span>
+	<span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span><span class="token function">IS_ALERT</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度値が負数の場合は、2の補数として不足しているビットを補完します。</span>
+	<span class="token comment">// -&gt;加速度値が負数かどうかの判定は、IS_MINUS_VALUEマクロを使用します。</span>
+	<span class="token comment">//   不足しているビットは、VALUE_COMPLEMENTARYで補完します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">IS_MINUS_VALUE</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span><span class="token punctuation">)</span>
+		buf <span class="token operator">|=</span> VALUE_COMPLEMENTARY<span class="token punctuation">;</span>
+
+	<span class="token comment">// レジスタから取得した値を、ミリGに変換して返却します。</span>
+	<span class="token comment">// -&gt;ミリGへの変換は、MILLI_G_FACTORを乗算します。</span>
+	<span class="token keyword keyword-return">return</span> buf <span class="token operator">*</span> MILLI_G_FACTOR<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">input_dev</span> <span class="token operator">*</span>input<span class="token punctuation">;</span>
+
+<span class="token comment">// 割込み遅延処理関数(irq_worker)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">irq_worker</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">work_struct</span> <span class="token operator">*</span>work<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> data_x<span class="token punctuation">,</span> data_y<span class="token punctuation">,</span> data_z<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサが無効の場合、以降の処理を終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>false <span class="token operator">==</span> is_acceleration_enable<span class="token punctuation">)</span>
+		<span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサから、加速度値X,Y,Zをそれぞれ取得します。(read_acceleration_value)</span>
+	<span class="token comment">// -&gt;レジスタはそれぞれ、</span>
+	<span class="token comment">//   REG_X_VALUE, REG_Y_VALUE, REG_Z_VALUE を指定します。</span>
+	data_x <span class="token operator">=</span> <span class="token function">read_acceleration_value</span><span class="token punctuation">(</span>REG_X_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	data_y <span class="token operator">=</span> <span class="token function">read_acceleration_value</span><span class="token punctuation">(</span>REG_Y_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	data_z <span class="token operator">=</span> <span class="token function">read_acceleration_value</span><span class="token punctuation">(</span>REG_Z_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// X,Y,Zの値をそれぞれ通知します。(input_report_abs)</span>
+	<span class="token function">input_report_abs</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_X<span class="token punctuation">,</span> data_x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">input_report_abs</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_Y<span class="token punctuation">,</span> data_y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">input_report_abs</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_Z<span class="token punctuation">,</span> data_z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 同期イベントを通知します。(input_sync)</span>
+	<span class="token function">input_sync</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 割込みハンドラで無効にした割込みを有効化します。(enable_irq)</span>
+	<span class="token comment">// -&gt;割込み番号は、acceleration_i2c_client-&gt;irqを指定します。</span>
+	<span class="token function">enable_irq</span><span class="token punctuation">(</span>acceleration_i2c_client<span class="token operator">-&gt;</span>irq<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// ワークキュー定義</span>
+<span class="token keyword keyword-static">static</span> <span class="token function">DECLARE_DELAYED_WORK</span><span class="token punctuation">(</span>irq_process<span class="token punctuation">,</span> irq_worker<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 割込みハンドラ(irq_handler)</span>
+<span class="token keyword keyword-static">static</span> <span class="token class-name">irqreturn_t</span> <span class="token function">irq_handler</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> irq<span class="token punctuation">,</span> <span class="token keyword keyword-void">void</span> <span class="token operator">*</span>dev<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 割込みを一時的に無効化します。(disable_irq_nosync)</span>
+	<span class="token comment">// -&gt;割込み遅延処理が完了するまで無効にします。</span>
+	<span class="token function">disable_irq_nosync</span><span class="token punctuation">(</span>irq<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサから値を取得する処理を、</span>
+	<span class="token comment">// ワークキューで遅延処理させます。(schedule_delayed_work)</span>
+	<span class="token comment">// -&gt;acceleration_store_delay関数で指定されたミリ秒後に実行されるようにします。</span>
+	<span class="token comment">//   schedule_delayed_workに指定する単位はjiffiesのため、</span>
+	<span class="token comment">//   ミリ秒からjiffiesに変換します。(msecs_to_jiffies)</span>
+	<span class="token function">schedule_delayed_work</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>irq_process<span class="token punctuation">,</span>
+		<span class="token function">msecs_to_jiffies</span><span class="token punctuation">(</span>event_interval_ms<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> IRQ_HANDLED<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>pdev<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token function">DEVICE_ATTR</span><span class="token punctuation">(</span>enable<span class="token punctuation">,</span> S_IWUSR<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> acceleration_store_enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token function">DEVICE_ATTR</span><span class="token punctuation">(</span>delay<span class="token punctuation">,</span> S_IWUSR<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> acceleration_store_delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 属性配列</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">attribute</span> <span class="token operator">*</span>acceleration_attrs<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token operator">&amp;</span>dev_attr_enable<span class="token punctuation">.</span>attr<span class="token punctuation">,</span>
+	<span class="token operator">&amp;</span>dev_attr_delay<span class="token punctuation">.</span>attr<span class="token punctuation">,</span>
+	<span class="token constant">NULL</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 属性グループ構造体</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">attribute_group</span> acceleration_attr_group <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span>attrs <span class="token operator">=</span> acceleration_attrs<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// i2c_probe関数(acceleration_i2c_probe)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_i2c_probe</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_client</span> <span class="token operator">*</span>client<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_device_id</span> <span class="token operator">*</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// I2Cクライアントをグローバル変数(acceleration_i2c_client)に保持します。</span>
+	acceleration_i2c_client <span class="token operator">=</span> client<span class="token punctuation">;</span>
+
+	<span class="token comment">// 入力デバイス構造体を割り当てます。(input_allocate_device)</span>
+	input <span class="token operator">=</span> <span class="token function">input_allocate_device</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>input<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		ret <span class="token operator">=</span> <span class="token operator">-</span>ENOMEM<span class="token punctuation">;</span>
+		<span class="token keyword keyword-goto">goto</span> err_ret<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// X軸、Y軸、Z軸の最大値、最小値を設定します。(input_set_abs_params)</span>
+	<span class="token function">input_set_abs_params</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_X<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">input_set_abs_params</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_Y<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">input_set_abs_params</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> ABS_Z<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 入力デバイス構造体を設定します。</span>
+	input<span class="token operator">-&gt;</span>name <span class="token operator">=</span> <span class="token string">"armadillo-x1-extension-acceleration"</span><span class="token punctuation">;</span>
+	input<span class="token operator">-&gt;</span>phys <span class="token operator">=</span> <span class="token string">"armadillo-x1/input2"</span><span class="token punctuation">;</span>
+	input<span class="token operator">-&gt;</span>id<span class="token punctuation">.</span>bustype <span class="token operator">=</span> BUS_I2C<span class="token punctuation">;</span>
+	input<span class="token operator">-&gt;</span>dev<span class="token punctuation">.</span>parent <span class="token operator">=</span> <span class="token operator">&amp;</span>pdev<span class="token operator">-&gt;</span>dev<span class="token punctuation">;</span>
+
+	<span class="token comment">// ABSイベントを登録します。(set_bit)</span>
+	<span class="token comment">// -&gt;この設定によって、デバイスがどのような機能を持つのかを設定します。</span>
+	<span class="token function">set_bit</span><span class="token punctuation">(</span>EV_ABS<span class="token punctuation">,</span> input<span class="token operator">-&gt;</span>evbit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">set_bit</span><span class="token punctuation">(</span>ABS_X<span class="token punctuation">,</span> input<span class="token operator">-&gt;</span>absbit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">set_bit</span><span class="token punctuation">(</span>ABS_Y<span class="token punctuation">,</span> input<span class="token operator">-&gt;</span>absbit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">set_bit</span><span class="token punctuation">(</span>ABS_Z<span class="token punctuation">,</span> input<span class="token operator">-&gt;</span>absbit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサから割込みが発生するように要求します。(request_irq)</span>
+	<span class="token comment">// -&gt;割込み番号は、client-&gt;irqを指定します。</span>
+	<span class="token comment">//   割込みハンドラは、irq_handlerを指定します。</span>
+	ret <span class="token operator">=</span> <span class="token function">request_irq</span><span class="token punctuation">(</span>client<span class="token operator">-&gt;</span>irq<span class="token punctuation">,</span> irq_handler<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"armadillo-x1-extension-acceleration"</span><span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-goto">goto</span> err_free_mem<span class="token punctuation">;</span>
+
+	<span class="token comment">// 割込みを一時的に無効化します。(disable_irq)</span>
+	<span class="token comment">// -&gt;割込み番号は、client-&gt;irqを指定します。</span>
+	<span class="token function">disable_irq</span><span class="token punctuation">(</span>client<span class="token operator">-&gt;</span>irq<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 入力デバイスを登録します。(input_register_device)</span>
+	ret <span class="token operator">=</span> <span class="token function">input_register_device</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-goto">goto</span> err_free_irq<span class="token punctuation">;</span>
+
+	<span class="token comment">// 属性グループを作成します。(sysfs_create_group)</span>
+	ret <span class="token operator">=</span> <span class="token function">sysfs_create_group</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>client<span class="token operator">-&gt;</span>dev<span class="token punctuation">.</span>kobj<span class="token punctuation">,</span> <span class="token operator">&amp;</span>acceleration_attr_group<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-goto">goto</span> err_input_unregister_device<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+ err_input_unregister_device<span class="token operator">:</span>
+	<span class="token function">input_unregister_device</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ err_free_irq<span class="token operator">:</span>
+	<span class="token function">free_irq</span><span class="token punctuation">(</span>client<span class="token operator">-&gt;</span>irq<span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ err_free_mem<span class="token operator">:</span>
+	<span class="token function">input_free_device</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ err_ret<span class="token operator">:</span>
+	<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// i2c_remove関数(acceleration_i2c_remove)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_i2c_remove</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_client</span> <span class="token operator">*</span>client<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// 割込み要求を解除します。(free_irq)</span>
+	<span class="token function">free_irq</span><span class="token punctuation">(</span>client<span class="token operator">-&gt;</span>irq<span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサを無効にします。(acceleration_disable_setting)</span>
+	<span class="token function">acceleration_disable_setting</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ワークキューの処理が完了するまで待機します。(flush_scheduled_work)</span>
+	<span class="token function">flush_scheduled_work</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// ワークキューの遅延処理をキャンセルします。(cancel_delayed_work_sync)</span>
+	<span class="token function">cancel_delayed_work_sync</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>irq_process<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 属性グループを削除します。(sysfs_remove_group)</span>
+	<span class="token function">sysfs_remove_group</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>client<span class="token operator">-&gt;</span>dev<span class="token punctuation">.</span>kobj<span class="token punctuation">,</span> <span class="token operator">&amp;</span>acceleration_attr_group<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 入力デバイスの登録を解除します。(input_unregister_device)</span>
+	<span class="token function">input_unregister_device</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 入力デバイス構造体のメモリ領域を開放します。(input_free_device)</span>
+	<span class="token function">input_free_device</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// グローバル変数(acceleration_i2c_client)を初期化します。</span>
+	acceleration_i2c_client <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// デバイスマッチング構造体配列</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">of_device_id</span> acceleration_i2c_of_match<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">{</span> <span class="token punctuation">.</span>compatible <span class="token operator">=</span> <span class="token string">"fsl,mma7660"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// デバイスID構造体配列</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-const">const</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_device_id</span> acceleration_i2c_id_table<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">{</span> <span class="token string">"mma7660"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// I2Cドライバ構造体</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">i2c_driver</span> acceleration_i2c_driver <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span>id_table	<span class="token operator">=</span> acceleration_i2c_id_table<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>probe		<span class="token operator">=</span> acceleration_i2c_probe<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>remove		<span class="token operator">=</span> acceleration_i2c_remove<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>driver		<span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span>name	<span class="token operator">=</span> <span class="token string">"acceleration"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">.</span>owner	<span class="token operator">=</span> THIS_MODULE<span class="token punctuation">,</span>
+		<span class="token punctuation">.</span>of_match_table <span class="token operator">=</span> <span class="token function">of_match_ptr</span><span class="token punctuation">(</span>acceleration_i2c_of_match<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// probe関数(acceleration_probe)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_probe</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>platform_device<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	pdev <span class="token operator">=</span> platform_device<span class="token punctuation">;</span>
+
+	<span class="token comment">// I2Cドライバを登録します。(i2c_add_driver)</span>
+	<span class="token keyword keyword-return">return</span> <span class="token function">i2c_add_driver</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>acceleration_i2c_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// remove関数(acceleration_remove)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">acceleration_remove</span><span class="token punctuation">(</span><span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_device</span> <span class="token operator">*</span>pdev<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// I2Cドライバの登録を解除します。(i2c_del_driver)</span>
+	<span class="token function">i2c_del_driver</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>acceleration_i2c_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// プラットフォームドライバ</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-struct">struct</span> <span class="token class-name">platform_driver</span> acceleration_platform_driver <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span>probe		<span class="token operator">=</span> acceleration_probe<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>remove		<span class="token operator">=</span> acceleration_remove<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span>driver		<span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span>name	<span class="token operator">=</span> <span class="token string">"armadillo-x1-extension-acceleration"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">.</span>owner	<span class="token operator">=</span> THIS_MODULE<span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 初期化関数(acceleration_init)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> __init <span class="token function">acceleration_init</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+
+	<span class="token comment">// プラットフォームデバイスを登録します。(platform_device_register_simple)</span>
+	<span class="token comment">// -&gt;プラットフォーム依存のデバイス情報を登録します。</span>
+	pdev <span class="token operator">=</span> <span class="token function">platform_device_register_simple</span><span class="token punctuation">(</span><span class="token string">"armadillo-x1-extension-acceleration"</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">IS_ERR</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		ret <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>pdev<span class="token punctuation">;</span>
+		<span class="token keyword keyword-goto">goto</span> err_ret<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// プラットフォームドライバを登録します。(platform_driver_register)</span>
+	<span class="token comment">// -&gt;登録したプラットフォームデバイスのリソース情報を取得し、</span>
+	<span class="token comment">//   プラットフォームドライバとして、probe関数とremove関数を登録します。</span>
+	ret <span class="token operator">=</span> <span class="token function">platform_driver_register</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>acceleration_platform_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+		<span class="token keyword keyword-goto">goto</span> err_platform_device_unregister<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+ err_platform_device_unregister<span class="token operator">:</span>
+	<span class="token function">platform_device_unregister</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ err_ret<span class="token operator">:</span>
+	<span class="token keyword keyword-return">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 終了関数(acceleration_exit)</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> __exit <span class="token function">acceleration_exit</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token comment">// プラットフォームドライバの登録を解除します。(platform_driver_unregister)</span>
+	<span class="token function">platform_driver_unregister</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>acceleration_platform_driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// プラットフォームデバイスの登録を解除します。(platform_device_unregister)</span>
+	<span class="token function">platform_device_unregister</span><span class="token punctuation">(</span>pdev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 初期化の際に、初期化関数が呼ばれるように登録します。</span>
+<span class="token function">module_init</span><span class="token punctuation">(</span>acceleration_init<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 終了する際に、終了関数が呼ばれるように登録します。</span>
+<span class="token function">module_exit</span><span class="token punctuation">(</span>acceleration_exit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// MODULE_LICENSEは"GPL"とします。</span>
+<span class="token function">MODULE_LICENSE</span><span class="token punctuation">(</span><span class="token string">"GPL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile">Makefile </h4>
+<details open=""><summary> 04.sensor/drivers/acceleration/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>KERNELDIR <span class="token operator">=</span> /home/atmark/linux-4.9-x1-at27_dbg
+ARCH <span class="token operator">=</span> arm
+PREFIX <span class="token operator">=</span> arm-linux-gnueabihf-
+MOD_PATH <span class="token operator">=</span> /work/linux/nfsroot
+
+EXTRA_CFLAGS <span class="token operator">+=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+obj-m :<span class="token operator">=</span> acceleration.o
+
+modules:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>ARCH<span class="token variable">)</span></span> <span class="token assign-left variable">CROSS_COMPILE</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>PREFIX<span class="token variable">)</span></span> modules
+
+modules_install:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>ARCH<span class="token variable">)</span></span> <span class="token assign-left variable">INSTALL_MOD_PATH</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>MOD_PATH<span class="token variable">)</span></span> modules_install
+
+myinstall:
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.ko /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> <span class="token parameter variable">-C</span> <span class="token variable"><span class="token variable">$(</span>KERNELDIR<span class="token variable">)</span></span> <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> clean
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認">動作確認 </h3>
+<h4 id="make-clean">make clean </h4>
+<details open=""><summary> $ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration$ <span class="token function">make</span> clean
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> clean
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="make-modules">make modules </h4>
+<div class="admonition warning">
+<p class="admonition-title">「make[2]: 警告: ファイル '/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/02.led/drivers/leds/leds.o' の修正時刻 20 は未来の時刻です」と表示された場合は chrony を ATDE8 と ArmadilloX1 にインストールすると解決する</p>
+</div>
+<details open=""><summary> $ make modules </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration$ <span class="token function">make</span> modules
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">CROSS_COMPILE</span><span class="token operator">=</span>arm-linux-gnueabihf- modules
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+  CC <span class="token punctuation">[</span>M<span class="token punctuation">]</span>  /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration/acceleration.o
+  Building modules, stage <span class="token number">2</span>.
+  MODPOST <span class="token number">1</span> modules
+make<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>: 警告: ファイル <span class="token string">'/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration/acceleration.mod.c'</span> の修正時刻 <span class="token number">0.01</span> は未来の時刻です
+  CC      /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration/acceleration.mod.o
+  LD <span class="token punctuation">[</span>M<span class="token punctuation">]</span>  /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration/acceleration.ko
+make<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>: 警告:  時刻のずれを検出. 不完全なビルド結果になるかもしれません.
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-modules_install">sudo make modules_install </h4>
+<details open=""><summary> $ sudo make modules_install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration$ <span class="token function">sudo</span> <span class="token function">make</span> modules_install
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">make</span> <span class="token parameter variable">-C</span> /home/atmark/linux-4.9-x1-at27_dbg <span class="token assign-left variable">M</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span> <span class="token assign-left variable">ARCH</span><span class="token operator">=</span>arm <span class="token assign-left variable">INSTALL_MOD_PATH</span><span class="token operator">=</span>/work/linux/nfsroot modules_install
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> に入ります
+  INSTALL /media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration/acceleration.ko
+  DEPMOD  <span class="token number">4.9</span>.133-at27
+depmod: WARNING: could not <span class="token function">open</span> modules.order at /work/linux/nfsroot/lib/modules/4.9.133-at27: No such <span class="token function">file</span> or directory
+depmod: WARNING: could not <span class="token function">open</span> modules.builtin at /work/linux/nfsroot/lib/modules/4.9.133-at27: No such <span class="token function">file</span> or directory
+make<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>: ディレクトリ <span class="token string">'/home/atmark/linux-4.9-x1-at27_dbg'</span> から出ます
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-myinstall">sudo make myinstall </h4>
+<details open=""><summary> $ sudo make myinstall </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor/drivers/acceleration$ <span class="token function">sudo</span> <span class="token function">make</span> myinstall
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.ko /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> *.c  /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre></details>
+<h4 id="cd">cd </h4>
+<details open=""><summary> root@armadillo:/# cd /lib/modules/4.9.133-at27/extra/ </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:~<span class="token comment"># cd /lib/modules/4.9.133-at27/extra/</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre></details>
+<h4 id="insmod">insmod </h4>
+<details open=""><summary> #insmod leds.ko, #insmod acceleration ko と #insmod buttons.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod acceleration.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod buttons.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+buttons                 <span class="token number">3065</span>  <span class="token number">0</span>
+acceleration            <span class="token number">5941</span>  <span class="token number">0</span>
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="span-stylecolor-red-tail--f-varlogkernlog-で-devinputevent-を確認span"><span style="color: red"># tail -f /var/log/kern.log で /dev/input/event* を確認</span> </h4>
+<div class="admonition note">
+<p class="admonition-title">acceleration.ko -&gt; buttons.ko の順番で insmod すると、acceleration はevent<span style="color: red">3</span>、buttons は event <span style="color: red">4</span>となる</p>
+</div>
+<details open=""><summary> root@armadillo:~# tail -f /var/log/kern.log </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:~<span class="token comment"># tail -f /var/log/kern.log</span>
+Feb <span class="token number">14</span> <span class="token number">19</span>:12:08 armadillo kernel: random: systemd: uninitialized urandom <span class="token builtin class-name">read</span> <span class="token punctuation">(</span><span class="token number">16</span> bytes <span class="token builtin class-name">read</span><span class="token punctuation">)</span>
+Feb <span class="token number">14</span> <span class="token number">19</span>:12:08 armadillo kernel: random: systemd: uninitialized urandom <span class="token builtin class-name">read</span> <span class="token punctuation">(</span><span class="token number">16</span> bytes <span class="token builtin class-name">read</span><span class="token punctuation">)</span>
+Feb <span class="token number">14</span> <span class="token number">19</span>:12:08 armadillo kernel: nf_conntrack: default automatic helper assignment has been turned off <span class="token keyword keyword-for">for</span> security reasons and CT-based  firewall rule not found. Use the iptables CT target to attach helpers instead.
+Feb <span class="token number">14</span> <span class="token number">19</span>:12:08 armadillo kernel: random: crng init <span class="token keyword keyword-done">done</span>
+Feb <span class="token number">14</span> <span class="token number">19</span>:12:08 armadillo kernel: random: <span class="token number">6</span> urandom warning<span class="token punctuation">(</span>s<span class="token punctuation">)</span> missed due to ratelimiting
+Jul  <span class="token number">5</span> 07:48:44 armadillo kernel: IPVS: Creating netns <span class="token assign-left variable">size</span><span class="token operator">=</span><span class="token number">912</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token number">1</span>
+Jul  <span class="token number">5</span> 07:48:45 armadillo kernel: IPv6: ADDRCONF<span class="token punctuation">(</span>NETDEV_UP<span class="token punctuation">)</span>: wlan0: <span class="token function">link</span> is not ready
+Jul  <span class="token number">5</span> 07:48:46 armadillo kernel: IPv6: ADDRCONF<span class="token punctuation">(</span>NETDEV_UP<span class="token punctuation">)</span>: wlan0: <span class="token function">link</span> is not ready
+Jul  <span class="token number">5</span> 09:07:29 armadillo kernel: leds: loading out-of-tree module taints kernel.
+Jul  <span class="token number">5</span> 09:07:35 armadillo kernel: input: armadillo-x1-extension-acceleration as /devices/platform/armadillo-x1-extension-acceleration/input/input3  <span class="token operator">&lt;</span>───── <span class="token number">3</span>
+Jul  <span class="token number">5</span> 09:28:28 armadillo kernel: input: armadillo-x1-extension-btns as /devices/platform/armadillo-x1-extension-btns/input/input4 <span class="token operator">&lt;</span>────────────────────── <span class="token number">4</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="デバイスファイル">デバイスファイル </h3>
+<h6 id="devinputevent">"/dev/input/event*" </h6>
+<p>*には連番</p>
+<div class="admonition warning">
+<p class="admonition-title">ボタンスイッチ、センサなど複数の入力デバイスがある場合、ソースファイル内ではデバイスファイル/dev/input/event* の * を<span style="color: red">決め打ち</span>しているので注意すること</p>
+</div>
+<h4 id="イベント">イベント </h4>
+<p>読み出したイベントデータは次のinput_event構造体の形で表示</p>
+<details open=""><summary> input_event構造体 </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/input.h&gt;</span></span>
+
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">input_event</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-struct">struct</span> <span class="token class-name">timeval</span> time<span class="token punctuation">;</span>
+  __u16 type<span class="token punctuation">;</span>
+  __u16 code<span class="token punctuation">;</span>
+  __s32 value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>code</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3(EV_ABS)</td>
+<td>0(ABS_X)</td>
+<td>X軸加速度(mG)</td>
+</tr>
+<tr>
+<td>3(EV_ABS)</td>
+<td>1(ABS_Y)</td>
+<td>Y軸加速度(mG)</td>
+</tr>
+<tr>
+<td>3(EV_ABS)</td>
+<td>2(ABS_Z)</td>
+<td>Z軸加速度(mG)</td>
+</tr>
+</tbody>
+</table>
+<p>G は重力加速度の単位(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.0</mn><mi>G</mi><mo>=</mo><mn>9.8</mn><mi>m</mi><mi mathvariant="normal">/</mi><msup><mi>s</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1.0G = 9.8 m/s^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1.0</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">9.8</span><span class="mord mathnormal">m</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>)<br>
+mG は G の 1000 分の 1</p>
+<h5 id="ev_absイベント発生間隔設定ファイル">EV_ABSイベント発生間隔設定ファイル </h5>
+<p>"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/delay"</p>
+<p>イベント発生間隔（初期値）: 1000ms</p>
+<h5 id="センサの有効化ファイル">センサの有効化ファイル </h5>
+<p>"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/enable"</p>
+<p>有効化: 0 以外の値を書き込む<br>
+無効化: 0</p>
+<h5 id="その他">その他 </h5>
+<ul>
+<li>一連のイベントの終わりに EV_SYN（同期）</li>
+<li>ボタンイベントと同様に EV_ABS イベントの直後に EV_SYN イベントが発生</li>
+</ul>
+<h2 id="例題-asevent">例題 asevent </h2>
+<p>センサイベントの内容を表示する</p>
+<ul>
+<li>X軸加速度が変化したとき --&gt; "X:[X軸valueの値]"</li>
+<li>Y軸加速度が変化したとき --&gt; "Y:[Y軸valueの値]"</li>
+<li>Z軸加速度が変化したとき --&gt; "Z:[Z軸valueの値]"</li>
+<li>同期イベント発生時      --&gt;  "EV_SYN:----------"</li>
+</ul>
+<p>センサを有効化、発生間隔は2000ms</p>
+<h3 id="ソース-1">ソース </h3>
+<h4 id="aseventc">asevent.c </h4>
+<details open=""><summary> 04.sensor/asevent.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fcntl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/input.h&gt;</span></span>
+
+<span class="token comment">// イベントデバイスファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_EV_FILE</span>	<span class="token string">"/dev/input/event3"</span></span>
+<span class="token comment">// 加速度センサ制御用ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_DELAY_FILE</span>	<span class="token string">"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/delay"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_ENABLE_FILE</span>	<span class="token string">"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/enable"</span></span>
+<span class="token comment">// 通知時間(ms)</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">DELAY_TIME</span>		<span class="token expression"><span class="token number">2000</span></span></span>
+<span class="token comment">// センサの有効設定</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">ENABLE_MODE</span>		<span class="token expression"><span class="token number">1</span></span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> fd_as<span class="token punctuation">,</span> fd_as_delay<span class="token punctuation">,</span> fd_as_enable<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> ret<span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> value<span class="token punctuation">;</span>
+	<span class="token keyword keyword-char">char</span> data<span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> n<span class="token punctuation">;</span>
+	<span class="token keyword keyword-struct">struct</span> <span class="token class-name">input_event</span> ev<span class="token punctuation">;</span>
+
+	<span class="token comment">// 加速度センサの通知間隔設定属性ファイルをオープンします。</span>
+	fd_as_delay <span class="token operator">=</span> <span class="token function">open</span><span class="token punctuation">(</span>AS_DELAY_FILE<span class="token punctuation">,</span> O_WRONLY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// オープンに失敗した場合、エラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>fd_as_delay <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to open device"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 加速度センサ有効化属性ファイルをオープンします。</span>
+	fd_as_enable <span class="token operator">=</span> <span class="token function">open</span><span class="token punctuation">(</span>AS_ENABLE_FILE<span class="token punctuation">,</span> O_WRONLY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// オープンに失敗した場合、エラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>fd_as_enable <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to open device"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// イベントデバイスファイルをオープンします。</span>
+	fd_as <span class="token operator">=</span> <span class="token function">open</span><span class="token punctuation">(</span>AS_EV_FILE<span class="token punctuation">,</span> O_RDONLY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// オープンに失敗した場合、エラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>fd_as <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to open device"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 通知間隔を設定します。</span>
+	n <span class="token operator">=</span> <span class="token function">sprintf</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span><span class="token string">"%d"</span><span class="token punctuation">,</span>DELAY_TIME<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	ret <span class="token operator">=</span> <span class="token function">write</span><span class="token punctuation">(</span>fd_as_delay<span class="token punctuation">,</span> data<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// 書き込みが失敗した場合、エラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to write"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 加速度センサを有効にします。</span>
+	n <span class="token operator">=</span> <span class="token function">sprintf</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span><span class="token string">"%d"</span><span class="token punctuation">,</span>ENABLE_MODE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	ret <span class="token operator">=</span> <span class="token function">write</span><span class="token punctuation">(</span>fd_as_enable<span class="token punctuation">,</span> data<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// 書き込みが失敗した場合、エラー終了します。</span>
+	<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to write"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// イベント内容を表示する処理。</span>
+	<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// 入力イベント構造体を読み込みます。</span>
+		ret <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span>fd_as<span class="token punctuation">,</span> <span class="token operator">&amp;</span>ev<span class="token punctuation">,</span> <span class="token keyword keyword-sizeof">sizeof</span><span class="token punctuation">(</span>ev<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// 読み込みに失敗した場合、エラー終了します。</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ret <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"failed to read events"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">// イベントのタイプで表示内容を変化します。</span>
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>ev<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// タイプがEV_ABSの時の処理。</span>
+		<span class="token keyword keyword-case">case</span> EV_ABS<span class="token operator">:</span>
+			<span class="token comment">// コードがABS_XならXの値を表示します。</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ev<span class="token punctuation">.</span>code <span class="token operator">==</span> ABS_X<span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"X : %d\n"</span><span class="token punctuation">,</span>ev<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">// コードがABS_YならYの値を表示します。</span>
+			<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ev<span class="token punctuation">.</span>code <span class="token operator">==</span> ABS_Y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Y : %d\n"</span><span class="token punctuation">,</span>ev<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">// コードがABS_ZならZの値を表示します。</span>
+			<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>ev<span class="token punctuation">.</span>code <span class="token operator">==</span> ABS_Z<span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Z : %d\n"</span><span class="token punctuation">,</span>ev<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">// コードが上記以外なら、エラー終了します。</span>
+			<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+				<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"invalid event code\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-return">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// タイプがEV_SYNの時の処理。</span>
+		<span class="token keyword keyword-case">case</span> EV_SYN<span class="token operator">:</span>
+			<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"EV_SYN: -------------\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+		<span class="token comment">// タイプが上記以外なら、エラー終了します。</span>
+		<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+			<span class="token function">fprintf</span><span class="token punctuation">(</span><span class="token constant">stderr</span><span class="token punctuation">,</span> <span class="token string">"unknown event\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-return">return</span> <span class="token number">2</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 加速度センサ制御用ファイルをクローズします。</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>fd_as_delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>fd_as_enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// イベントデバイスファイルをクローズします。</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>fd_as<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile-1">Makefile </h4>
+<details open=""><summary> 04.sensor/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>CC <span class="token operator">=</span> arm-linux-gnueabihf-gcc
+<span class="token comment">#TARGET = asevent asled</span>
+TARGET <span class="token operator">=</span> asevent
+CFLAGS <span class="token operator">=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+all: <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+<span class="token function">install</span> <span class="token builtin class-name">:</span>
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span> /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span> /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+.PHONY: clean
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認-1">動作確認 </h3>
+<h4 id="make-clean-1">make clean </h4>
+<details open=""><summary> $ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">make</span> clean
+<span class="token function">rm</span> <span class="token parameter variable">-f</span> asevent
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="make">make </h4>
+<details open=""><summary> $ make </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">make</span>
+arm-linux-gnueabihf-gcc -gdwarf-2 <span class="token parameter variable">-O0</span>    asevent.c   <span class="token parameter variable">-o</span> asevent
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-install">sudo make install </h4>
+<details open=""><summary> $ sudo make install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asevent /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asevent /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asevent.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="csideでロード">CSIDEでロード </h4>
+<details open=""><summary> メニュー「ファイル」-「ロード」</summary>
+<p><img src="./assets/2024-07-05_09-18-48.png" alt="alt text"></p>
+</details>
+<h4 id="insmod既にinsmod-済みなら割愛">insmod（既にinsmod 済みなら割愛） </h4>
+<div class="admonition warning">
+<p class="admonition-title">leds.ko も insmod しておくこと</p>
+</div>
+<details open=""><summary> # insmod leds.ko と # insmod acceleration.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod acceleration.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+acceleration            <span class="token number">5941</span>  <span class="token number">0</span>
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment">#</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行結果">実行結果 </h4>
+<details open=""><summary> root@armadillo:/debug/04_practice# ./asevent </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># ./asevent</span>
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-940</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-893</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">376</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-799</span>
+Y <span class="token builtin class-name">:</span> <span class="token parameter variable">-470</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">329</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-611</span>
+Y <span class="token builtin class-name">:</span> <span class="token parameter variable">-846</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">235</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-987</span>
+Y <span class="token builtin class-name">:</span> <span class="token number">94</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">0</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-705</span>
+Y <span class="token builtin class-name">:</span> <span class="token number">705</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">188</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-141</span>
+Y <span class="token builtin class-name">:</span> <span class="token number">423</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">893</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token number">94</span>
+Y <span class="token builtin class-name">:</span> <span class="token number">705</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">658</span>
+EV_SYN: -------------
+X <span class="token builtin class-name">:</span> <span class="token parameter variable">-940</span>
+Y <span class="token builtin class-name">:</span> <span class="token parameter variable">-188</span>
+Z <span class="token builtin class-name">:</span> <span class="token number">235</span>
+EV_SYN: -------------
+^C
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行している様子">実行している様子 </h4>
+<details open=""><summary> asevent を実行している動画 </summary>
+<p><a href="https://youtu.be/1O3wMkOxOCI">https://youtu.be/1O3wMkOxOCI</a></p>
+<p><video controls="" src="./assets/20240705_04sensor_asevent.mp4" title="Title" width="1024"></video></p>
+</details>
+<h2 id="課題1-asled">課題1 asled </h2>
+<p>センサイベントの値に応じてLEDを点灯する</p>
+<table>
+<thead>
+<tr>
+<th>加速度センサ Y軸</th>
+<th>LED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-90 ～ -60</td>
+<td>LED4,5,6,7,8 点灯</td>
+</tr>
+<tr>
+<td>-60 ～ -30</td>
+<td>LED4,5,6,7,  点灯</td>
+</tr>
+<tr>
+<td>-30 ～  0</td>
+<td>LED4,5,6,    点灯</td>
+</tr>
+<tr>
+<td>0</td>
+<td>LED4,5       点灯</td>
+</tr>
+<tr>
+<td>0  ～ 30</td>
+<td>LED3,4,5     点灯</td>
+</tr>
+<tr>
+<td>30  ～ 60</td>
+<td>LED2,3,4,5   点灯</td>
+</tr>
+<tr>
+<td>60 ～  90</td>
+<td>LED1,2,3,4,5 点灯</td>
+</tr>
+</tbody>
+</table>
+<p>※角度はおおよそで良い<br>
+※センサイベントは100ms間隔で発生</p>
+<h3 id="ソース-2">ソース </h3>
+<h4 id="asledc">asled.c </h4>
+<details open=""><summary> 04.sensor/asled.c </summary>
+<pre data-role="codeBlock" data-info="c{.line-numbers}" class="language-c c line-numbers"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fcntl.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;linux/input.h&gt;</span></span>
+
+<span class="token comment">// イベントデバイスファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_EV_FILE</span>	<span class="token string">"/dev/input/event3"</span></span>
+<span class="token comment">// 加速度センサ制御用ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_DELAY_FILE</span>	<span class="token string">"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/delay"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">AS_ENABLE_FILE</span>	<span class="token string">"/sys/devices/soc0/soc/30800000.aips-bus/30a30000.i2c/i2c-1/1-004c/enable"</span></span>
+<span class="token comment">// LED制御用ファイル</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">LED_FILE</span>	<span class="token string">"/sys/class/leds/led_ext/brightness"</span></span>
+<span class="token comment">// 通知時間(ms)</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">DELAY_TIME</span>		<span class="token expression"><span class="token number">100</span></span></span>
+<span class="token comment">// センサの有効設定</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">ENABLE_MODE</span>		<span class="token expression"><span class="token number">1</span></span></span>
+<span class="token comment">// LED書き込み用定義</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED1</span>		<span class="token expression"><span class="token number">0x01</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED2</span>		<span class="token expression"><span class="token number">0x02</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED3</span>		<span class="token expression"><span class="token number">0x04</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED_CENTER</span>	<span class="token expression"><span class="token number">0x18</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED6</span>		<span class="token expression"><span class="token number">0x20</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED7</span>		<span class="token expression"><span class="token number">0x40</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED8</span>		<span class="token expression"><span class="token number">0x80</span></span></span>
+<span class="token comment">// Y軸の閾値</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">THRESHOLD1</span>	<span class="token expression"><span class="token number">200</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">THRESHOLD2</span>	<span class="token expression"><span class="token number">400</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">THRESHOLD3</span>	<span class="token expression"><span class="token number">600</span></span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+
+
+
+
+
+
+
+	<span class="token comment">// 加速度センサの通知間隔設定属性ファイルをオープンします。</span>
+
+
+
+
+
+
+
+	<span class="token comment">// 加速度センサ有効化属性ファイルをオープンします。</span>
+
+
+
+
+
+
+
+	<span class="token comment">// イベントデバイスファイルをオープンします。</span>
+
+
+
+
+
+
+	<span class="token comment">// LEDデバイスファイルをオープンします。</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<span class="token comment">// 加速度センサを有効にします。</span>
+
+
+
+
+
+
+
+
+	<span class="token comment">// LEDを点灯させる処理。</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<span class="token comment">// 加速度センサ制御用ファイルをクローズします。</span>
+
+
+	<span class="token comment">// LED制御用ファイルをクローズします。</span>
+
+	<span class="token comment">// イベントデバイスファイルをクローズします。</span>
+
+
+	<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="makefile-2">Makefile </h4>
+<details open=""><summary> 04.sensor/Makefile </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>CC <span class="token operator">=</span> arm-linux-gnueabihf-gcc
+<span class="token comment">#TARGET = asevent asled</span>
+TARGET <span class="token operator">=</span> asled
+CFLAGS <span class="token operator">=</span> -gdwarf-2 <span class="token parameter variable">-O0</span>
+
+all: <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+<span class="token function">install</span> <span class="token builtin class-name">:</span>
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span> /work/linux/nfsroot/debug/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span> /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+	<span class="token function">cp</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+
+clean:
+	<span class="token function">rm</span> <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span>TARGET<span class="token variable">)</span></span>
+
+.PHONY: clean
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h3 id="動作確認-2">動作確認 </h3>
+<h4 id="make-clean-2">make clean </h4>
+<details open=""><summary> $ make clean </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">make</span> clean
+<span class="token function">rm</span> <span class="token parameter variable">-f</span> asled
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="make-1">make </h4>
+<details open=""><summary> $ make </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">make</span>
+arm-linux-gnueabihf-gcc -gdwarf-2 <span class="token parameter variable">-O0</span>    asled.c   <span class="token parameter variable">-o</span> asled
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre></details>
+<h4 id="sudo-make-install-1">sudo make install </h4>
+<details open=""><summary> $ sudo make install </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>atmark@atde8:/media/sf_ArmadilloX1/hwpwm/work/R06_2024/Application_debug/text/practice-example/04.sensor$ <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> atmark のパスワード:
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asled /work/linux/nfsroot/debug/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asled /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+<span class="token function">cp</span> <span class="token parameter variable">-p</span> asled.c /media/sf_ArmadilloX1/hwpwm/dbg/debug_share_hwpwm/R06_2024/04_practice
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="csideでロード-1">CSIDEでロード </h4>
+<details open=""><summary> メニュー「ファイル」-「ロード」</summary>
+<p><img src="./assets/2024-07-05_10-01-40.png" alt="alt text"></p>
+</details>
+<h4 id="insmod既にinsmod-済みなら割愛-1">insmod（既にinsmod 済みなら割愛） </h4>
+<details open=""><summary>  # insmod leds.ko と # insmod acceleration.ko </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod leds.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># insmod acceleration.ko</span>
+root@armadillo:/lib/modules/4.9.133-at27/extra<span class="token comment"># lsmod</span>
+Module                  Size  Used by
+acceleration            <span class="token number">5941</span>  <span class="token number">0</span>
+leds                    <span class="token number">2103</span>  <span class="token number">0</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></details>
+<h4 id="実行">実行 </h4>
+<details open=""><summary> root@armadillo:/debug/04_practice# ./asled </summary>
+<pre data-role="codeBlock" data-info="bash{.line-numbers}" class="language-bash bash line-numbers"><code>root@armadillo:/debug/04_practice<span class="token comment"># ./asled</span>
+</code><span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre></details>
+<h4 id="実行している様子-1">実行している様子 </h4>
+<details open=""><summary> asled による 加速度センサ と LED の連動動画 </summary>
+<p><a href="https://youtu.be/91Cou1sUmjA">https://youtu.be/91Cou1sUmjA</a></p>
+<p><video controls="" src="./assets/20240705_04sensor_asled.mp4" title="Title" width="1024"></video></p>
+</details>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
